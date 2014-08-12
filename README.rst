@@ -19,7 +19,7 @@ also you can edit the theme whatever you like
 The css file in syntax folder are pygment's syntax themes.
 
 The test_doc.rst_ is for testing usage.
-You can view the effect at http://rykka.github.io/rst-html-theme/
+You can view the effect at http://rykka.github.io/rst-html-theme/test
 
 Usage
 -----
