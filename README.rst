@@ -1,25 +1,28 @@
 Rst Html Theme
 ==============
 
-The html theme for rst.
+    A html theme for rst.
 
-Basically, this is for riv.vim_'s Html Theme.  
+                rst-html-theme
+
+This is created for riv.vim_. 
 But can be used for any rst document.
 
 Post issues_ or fork_ it as you like.
 
-Files
------
+Details
+-------
 
 The main theme html.css_ is inspired by GhostWriter_, 
 normalized, media sized and html4css.css are integrated.
 
-You can use it as your rst2html's themes.
-also you can edit the theme whatever you like
+You can use it as your rst document's themes.
 
 The css file in syntax folder are pygment's syntax themes.
 
 The test_doc.rst_ is for testing usage.
+It contains the rendered html tags and it's effects.
+
 You can view the effect at http://rykka.github.io/rst-html-theme/test
 
 Usage
