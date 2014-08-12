@@ -30,11 +30,14 @@ First install docutils and pygments
 
 If you are using rst2html's command tool.
 
-download the files, then inside the folder execute
+download the files, then inside the folder, execute
 
 .. code:: sh
 
-    rst2html.py /path/to/your/rst --stylesheet=html.css,syntax/molokai.css --syntax-highlight=short > /path/to/your/output
+    rst2html.py /path/to/your/rst \
+        --stylesheet=html.css,syntax/molokai.css \
+        --syntax-highlight=short \
+        > /path/to/the/output_html
 
 .. _riv.vim: http://github.com/rykka/riv.vim
 .. _html.css: html.css
