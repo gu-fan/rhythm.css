@@ -3,7 +3,7 @@ Rst Html Theme
 
     A html theme for rst.
 
-                -- rst-html-theme
+    -- rst-html-theme
 
 This is created for riv.vim_. 
 But can be used for any rst document.
