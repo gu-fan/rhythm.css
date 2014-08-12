@@ -1,11 +1,15 @@
+###################
+Rst-Html-Theme-Test
+###################
+
 :version: table.docinfo
-:author:  table.docinfo
+:author:  author <author@mail.com>
 :dedication: dedication.topic
 
 
 .. contents:: 
 
-div.section h1
+div.section h2
 ==============
 
     blockquote
@@ -176,8 +180,7 @@ __ test
 Directives 
 ~~~~~~~~~~~
 
-    
-   pre.code.python.literal-block
+   code: pre.code.python.literal-block
 
 .. code:: python 
 
@@ -211,9 +214,9 @@ Directives
 
 ----
 
-   img
+   image/figure: img
 
-.. image:: http://i7.minus.com/jKiQoSSHQ8tJZ.jpg
+.. image:: http://i4.minus.com/iblu46uOQ0N7Jx.jpg
 
 ----
 
@@ -226,7 +229,7 @@ admonition
 .. WARNING::
    Take care of your self
 .. Important::
-   Take care of your self
+   Remember the gold
 .. HINT::
    What about one more shot?
 
