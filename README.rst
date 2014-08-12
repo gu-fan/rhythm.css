@@ -8,6 +8,8 @@ Rst Html Theme
 This is created for riv.vim_. 
 But can be used for any rst document.
 
+View it at http://rykka.github.io/rst-html-theme/test
+
 Post issues_ or fork_ it as you like.
 
 Details
