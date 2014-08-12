@@ -4,8 +4,9 @@ Rst Html Theme
 The html theme for rst.
 
 Basically, this is for riv.vim_'s Html Theme.  
+But can be used for any rst document.
 
-Post issues_ or fork it as you like.
+Post issues_ or fork_ it as you like.
 
 Files
 -----
@@ -47,3 +48,4 @@ download the files, then inside the folder, execute
 .. _test_doc.rst: test_doc.rst
 .. _GhostWriter: http://ghost.jollygoodthemes.com/ghostwriter/
 .. _issues: https://github.com/Rykka/rst-html-theme/issues
+.. _fork: https://github.com/Rykka/rst-html-theme
