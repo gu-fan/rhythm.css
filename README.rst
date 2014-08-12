@@ -5,6 +5,9 @@ The html theme for rst.
 
 Basically, this is for riv.vim_'s Html Theme.  
 
+You can view the effect at http://rykka.github.io/rst-html-theme/
+
+Post issues or fork it as you like.
 
 Files
 -----
