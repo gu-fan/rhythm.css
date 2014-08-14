@@ -1,11 +1,7 @@
 rhythm.css
 ==========
 
-    **R** st
-
-    **H** tml
-
-    **TH** e **M** e
+    **R** st _ **H** tml _ **TH** e **M** e
 
     -- rhythm.css
 
