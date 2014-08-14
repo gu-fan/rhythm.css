@@ -3,7 +3,7 @@ rhythm.css
 
     A theme for rst syntax.
 
-    -- Rhythm.css
+    -- rhythm.css
 
 Optimized for rst document layout.
 
