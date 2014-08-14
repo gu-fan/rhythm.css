@@ -15,18 +15,17 @@ Post issues_ or fork_ it as you like.
 Details
 -------
 
-rhythm.css_ 
+dist/css/rhythm.css_ 
     Optimized for better reading.
 
     It's normalized, responsive, and rst syntax ready.
 
-syntax/xxx.css
+syntax/\*.css
     Used for pygment's syntax highlight. 
 
-test_doc.rst_
-    Test css with rst converted html file.
-
-    Contains 95% syntax items in rst.
+doc\rst_syntax.rst_
+    A rst document with most rst syntax item.
+    Userd to test css with rst converted html file.
 
     Preview at http://rykka.github.io/rhythm.css/test
 
@@ -63,6 +62,7 @@ TODO
 - [X] 2014-08-15 Add less support.
 - Add bare html support.
 - Add more themes.
+- optimize for chinese.
 
 
 .. _riv.vim: http://github.com/rykka/riv.vim

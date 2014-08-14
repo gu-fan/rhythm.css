@@ -92,10 +92,10 @@ module.exports = function (grunt) {
   // CSS distribution task.
   grunt.registerTask('less-compile', ['less']);
 
-  grunt.registerTask('dist-css', ['less-compile', 'usebanner','cssmin']);
+  grunt.registerTask('build', ['less-compile', 'usebanner','cssmin']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css']);
+  grunt.registerTask('dist', ['clean', 'build']);
 
   grunt.registerTask('test', ['exec:test', 'exec:browse']);
 

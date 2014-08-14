@@ -299,7 +299,7 @@ h2,
 h3,
 .h3 {
   margin-top: 25px;
-  margin-bottom: 12.5px;
+  margin-bottom: 17.85714286px;
 }
 h1 small,
 .h1 small,
@@ -321,7 +321,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 12.5px;
+  margin-top: 17.85714286px;
   margin-bottom: 12.5px;
 }
 h4 small,
@@ -395,8 +395,11 @@ a {
   color: #279cf5;
   text-decoration: none;
 }
+a:hover {
+  color: #0975c6;
+}
 p {
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0 0 25px;
 }
 a:hover {
@@ -406,11 +409,11 @@ pre {
   margin-bottom: 35px;
 }
 img {
-  margin: 25px 0;
+  margin: 25px auto;
 }
 hr.docutils {
   border: none;
-  border-bottom: 1px dashed #eeeeee;
+  border-bottom: 1px dashed #666666;
   margin: 75px 0;
 }
 h1.section-subtitle,
@@ -440,6 +443,7 @@ dl.docutils dd {
 dl.docutils dt {
   margin-top: 35px;
   margin-bottom: 10px;
+  margin-left: 10px;
   font-weight: bold;
 }
 span.classifier {
@@ -450,7 +454,7 @@ span.classifier-delimiter {
 }
 ul,
 ol {
-  line-height: 1.2;
+  line-height: 1.5;
   margin: 0 0 35px 10px;
   padding: 0;
 }
@@ -458,7 +462,7 @@ ul ul,
 ul ol,
 ol ul,
 ol ol {
-  margin: 25px 0 0 35px;
+  margin: 25px 0 0 10px;
 }
 ul li,
 ol li {
@@ -468,7 +472,7 @@ ul.auto-toc li {
   margin: 0 0 10px 10px;
 }
 ul.auto-toc ul {
-  margin: 10px;
+  margin: 10px 10px;
 }
 ol.simple,
 ul.simple {
@@ -522,7 +526,7 @@ table.docutils.docinfo td {
 }
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
-  background-color: #f7f7f3;
+  background-color: #f7f7ed;
 }
 table.field-list tbody > tr:nth-child(odd) > td,
 table.field-list tbody > tr:nth-child(odd) > th,
@@ -533,11 +537,6 @@ table.citation tbody > tr:nth-child(odd) > th,
 table.docinfo tbody > tr:nth-child(odd) > td,
 table.docinfo tbody > tr:nth-child(odd) > th {
   background-color: transparent;
-}
-table.citation {
-  width: auto;
-  border-left: solid 1px #000000;
-  margin-left: 1px;
 }
 table.field-list {
   width: auto;
@@ -552,9 +551,14 @@ table.docinfo {
   width: auto;
   margin: 35px 75px;
 }
+table.citation {
+  width: auto;
+  border-left: solid 2px #279cf5;
+  margin-left: 1px ;
+}
 table.footnote {
   width: auto;
-  border-left: solid 1px black;
+  border-left: solid 2px #279cf5;
   margin-left: 1px;
 }
 p.label {
@@ -616,7 +620,7 @@ pre.doctest-block {
   border: 1px dotted #ccccb4;
   margin-left: 35px;
   margin-right: 35px;
-  background-color: #f7f5e4;
+  background-color: #f7f7ed;
 }
 pre.address {
   margin-bottom: 0 ;
@@ -658,7 +662,7 @@ div.note,
 div.tip,
 div.warning {
   margin: 35px;
-  border: 1px dotted #eeeeee;
+  border: 1px dotted #777777;
   padding: 25px;
 }
 div.admonition p.admonition-title,
@@ -669,29 +673,34 @@ div.tip p.admonition-title {
   font-weight: bold ;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-div.attention p.admonition-title,
-div.caution p.admonition-title,
 div.danger p.admonition-title,
-div.error p.admonition-title,
-div.warning p.admonition-tiertle {
-  color: #d9534f;
+div.error p.admonition-title {
+  color: #d9423d;
   font-weight: bold ;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-div.note p.admonition-title,
-div.important p.admonition-title {
-  color: #5cb85c;
+div.admonition p.admonition-title,
+div.caution p.admonition-title,
+div.warning p.admonition-title {
+  color: #f0a843;
+  font-weight: bold ;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+div.attention p.admonition-title,
+div.important p.admonition-title {
+  color: #56cc56;
+}
+div.note p.admonition-title,
 div.hint p.admonition-title,
 div.tip p.admonition-title {
-  color: #5bc0de;
+  color: #4dc4e8;
 }
 /* Directive: sidebar/rubric{{{2*/
 div.sidebar {
   margin: 0 0 10px 25px;
   border: 1px dotted;
   padding: 25px;
-  background-color: #f7f5e4;
+  background-color: #f7f7ed;
   width: 40% ;
   float: right ;
   clear: right;
@@ -725,6 +734,10 @@ div.figure {
 }
 p.caption {
   font-style: italic;
+}
+.legend p {
+  font-size: 90%;
+  color: #888888;
 }
 img.align-left,
 .figure.align-left,
@@ -782,13 +795,13 @@ div.dedication {
   font-style: italic;
 }
 span.problematic {
-  color: #d9534f;
+  color: #d9423d;
 }
 div.system-messages {
   margin: 75px;
 }
 div.system-messages h1 {
-  color: #d9534f;
+  color: #d9423d;
 }
 div.system-message {
   border: medium solid #999999;
@@ -796,7 +809,7 @@ div.system-message {
   padding: 25px;
 }
 div.system-message p.system-message-title {
-  color: #d9534f;
+  color: #d9423d;
   font-weight: bold;
 }
 span.interpreted {

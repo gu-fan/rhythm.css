@@ -7,12 +7,15 @@ body {
 }
 
 a {
-  color: @a-color;
+  color: @link-color;
   text-decoration: none;
+  &:hover {
+    color: @link-hover-color;
+  }
 }
 
 p {
-line-height: 1.4;
+line-height: 1.5;
 margin: 0 0 @margin-base-vertical;
 }
 
@@ -21,7 +24,7 @@ pre {
   margin-bottom: @margin-large-vertical;
 }
 img {
-  margin: @margin-base-vertical 0;
+  margin: @margin-base-vertical auto;
 }
 
 // Basic: transition {{{2
@@ -58,6 +61,7 @@ margin-bottom: @margin-small-vertical }
 dl.docutils dt {
 margin-top: @margin-large-vertical;
 margin-bottom: @margin-small-vertical;
+margin-left: @list-indentation;
 font-weight: bold;
  }
 
@@ -69,21 +73,21 @@ font-weight: bold }
 
 // List: bullet & enumerated {{{2 
 ul, ol {
-  line-height: 1.2;
-  margin: 0 0 @margin-large-vertical @margin-small-vertical;
+  line-height: 1.5;
+  margin: 0 0 @margin-large-vertical @list-indentation;
   padding: 0; 
 }
 ul ul, ul ol, ol ul, ol ol {
-  margin: @margin-base-vertical 0 0 @margin-large-vertical;
+  margin: @margin-base-vertical 0 0 @list-indentation;
 }
 ul li, ol li { 
-  margin: 0 0 @margin-base-vertical  @margin-small-vertical;
+  margin: 0 0 @margin-base-vertical  @list-indentation;
 }
 ul.auto-toc li{
-  margin: 0 0 @margin-small-vertical  @margin-small-vertical;
+  margin: 0 0 @margin-small-vertical  @list-indentation;
 }
  ul.auto-toc ul {
-  margin: @margin-small-vertical;
+  margin: @margin-small-vertical @list-indentation;
  }
 ol.simple, ul.simple {
 margin-bottom: @line-height-computed }
@@ -145,12 +149,6 @@ table.citation tbody > tr:nth-child(odd) > th,
 table.docinfo tbody > tr:nth-child(odd) > td,
 table.docinfo tbody > tr:nth-child(odd) > th { background-color: transparent; }
 
-// [test]_ 
-table.citation {
-  width: auto;
-  border-left: solid 1px @gray-base;
-  margin-left: 1px 
-}
 // :field: item 
 table.field-list {
   width: auto;
@@ -167,13 +165,20 @@ span.option { white-space: nowrap }
 // :version: item 
 table.docinfo {
   width: auto;
-margin: @margin-large-vertical @margin-huge-vertical }
+margin: @margin-large-vertical @margin-huge-vertical 
+}
 
 
+// [test]_ 
+table.citation {
+  width: auto;
+  border-left: solid 2px @footnote-border-color;
+  margin-left: 1px ;
+}
 // [1] 
 table.footnote {
   width: auto;
-  border-left: solid 1px black;
+  border-left: solid 2px @footnote-border-color;
 margin-left: 1px }
   
 p.label { white-space: nowrap }
@@ -283,23 +288,32 @@ div.hint, div.important, div.note, div.tip, div.warning {
   border: 1px dotted @note-border-color;
 padding: @line-height-computed }
 
-div.admonition p.admonition-title, div.hint p.admonition-title,
-div.important p.admonition-title, div.note p.admonition-title,
+div.admonition p.admonition-title,
+div.hint p.admonition-title,
+div.important p.admonition-title,
+div.note p.admonition-title,
 div.tip p.admonition-title {
   font-weight: bold ;
 font-family: @font-family-sans-serif }
 
-div.attention p.admonition-title, div.caution p.admonition-title,
-div.danger p.admonition-title, div.error p.admonition-title,
-div.warning p.admonition-tiertle {
+div.danger p.admonition-title,
+div.error p.admonition-title {
   color: @brand-danger;
   font-weight: bold ;
-font-family: @font-family-sans-serif }
+  font-family: @font-family-sans-serif }
 
-div.note p.admonition-title,
+div.admonition p.admonition-title,
+div.caution p.admonition-title,
+div.warning p.admonition-title {
+  color: @brand-warning;
+  font-weight: bold ;
+  font-family: @font-family-sans-serif }
+
+div.attention p.admonition-title,
 div.important p.admonition-title{
   color: @brand-success;
 }
+div.note p.admonition-title,
 div.hint p.admonition-title,
 div.tip p.admonition-title {
   color: @brand-info;
@@ -344,6 +358,8 @@ div.figure {
   margin-left: @margin-large-vertical ;
   margin-right: @margin-large-vertical }
 p.caption { font-style: italic }
+.legend p {font-size: 90%; color: @legend-color;}
+
 
 img.align-left, .figure.align-left, object.align-left {
   clear: left ;
