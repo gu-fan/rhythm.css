@@ -1,7 +1,11 @@
 rhythm.css
 ==========
 
-    A theme for rst syntax.
+    **R** st
+
+    **H** tml
+
+    **TH** e **M** e
 
     -- rhythm.css
 
