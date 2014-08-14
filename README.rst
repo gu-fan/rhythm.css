@@ -23,7 +23,7 @@ dist/css/rhythm.css_
 syntax/\*.css
     Used for pygment's syntax highlight. 
 
-doc\rst_syntax.rst_
+doc/rst_syntax.rst_
     A rst document with most rst syntax item.
     Userd to test css with rst converted html file.
 
@@ -66,8 +66,8 @@ TODO
 
 
 .. _riv.vim: http://github.com/rykka/riv.vim
-.. _rhythm.css: rhythm.css
-.. _test_doc.rst: test_doc.rst
+.. _rhythm.css: dist/css/rhythm.css
+.. _rst_syntax.rst: doc/rst_syntax.rst
 .. _GhostWriter: http://ghost.jollygoodthemes.com/ghostwriter/
 .. _issues: https://github.com/Rykka/rhythm.css/issues
 .. _fork: https://github.com/Rykka/rhythm.css
