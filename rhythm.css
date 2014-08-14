@@ -715,11 +715,11 @@ table.borderless td, table.borderless th {
   /* Block: line-block {{{*/
   div.line-block {
     display: block ;
-    background-color: #F7F7F7;
     margin-top: 1em ;
   margin-bottom: 1em }
 
   div.line-block div.line {
+    background-color: #F7F7F7;
       margin-top: 0.1em;
       margin-bottom: 0.1em;
   }
