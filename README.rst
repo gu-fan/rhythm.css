@@ -1,7 +1,7 @@
 rhythm.css
 ==========
 
-    rst html theme
+    **r**\st **h**\tml **th**\e\ **\m**\e
 
     -- rhythm.css
 
