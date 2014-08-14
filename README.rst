@@ -1,11 +1,12 @@
 rhythm.css
 ==========
 
-    **r** st _  **h** tml _ **th** e **m** e 
+    rst html theme
 
     -- rhythm.css
 
-A css theme focus on reading.
+A css theme for rst document, 
+focused on reading.
 
 Preview at http://rykka.github.io/rhythm.css/test
 
