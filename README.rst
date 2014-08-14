@@ -1,54 +1,70 @@
 rhythm.css
 ==========
 
-    **R** st _ **H** tml _ **TH** e **M** e
+    **r** st _  **h** tml _ **th** e **m** e 
 
     -- rhythm.css
 
-Optimized for rst document layout.
+A css theme focus on reading.
 
-View it at http://rykka.github.io/rhythm.css/test
+Preview at http://rykka.github.io/rhythm.css/test
 
 Post issues_ or fork_ it as you like.
 
 Details
 -------
 
-The main theme html.css_ is inspired by GhostWriter_, 
-It's normalized, media size responsible and html4css.css integrated.
+rhythm.css_ 
+    Optimized for better reading.
 
-You can use it for  your rst document's themes.
+    It's normalized, responsive, and rst syntax ready.
 
-The css file in syntax folder are pygment's syntax themes.
+syntax/xxx.css
+    Used for pygment's syntax highlight. 
 
-The test_doc.rst_ is for testing usage.
-It contains the rendered html tags and it's effects.
+test_doc.rst_
+    Test css with rst converted html file.
 
-You can view the effect at http://rykka.github.io/rst-html-theme/test
+    Contains 95% syntax items in rst.
+
+    Preview at http://rykka.github.io/rhythm.css/test
 
 Usage
 -----
 
-First install docutils and pygments
+1. Install convert tool
 
 .. code:: sh
 
    sudo pip install docutils pygments
 
-If you are using rst2html's command tool.
 
-download the files, then inside the folder, execute
+2. Download
 
 .. code:: sh
 
-    rst2html.py /path/to/your/rst \
+   git clone  https://github.com/Rykka/rhythm.css.git
+   cd rhythm.css
+
+
+3. Execute
+
+.. code:: sh
+
+   rst2html.py /path/to/your/rst \
         --stylesheet=rhythm.css,syntax/molokai.css \
         --syntax-highlight=short \
         > /path/to/the/output_html
 
+TODO
+----
 
+- Add less support.
+- Add bare html support.
+
+
 .. _riv.vim: http://github.com/rykka/riv.vim
-.. _html.css: html.css
+.. _rhythm.css: rhythm.css
 .. _test_doc.rst: test_doc.rst
 .. _GhostWriter: http://ghost.jollygoodthemes.com/ghostwriter/
 .. _issues: https://github.com/Rykka/rhythm.css/issues
