@@ -7,7 +7,7 @@ rhythm.css
 
 Optimized for rst document layout.
 
-View it at http://rykka.github.io/rhythm/test
+View it at http://rykka.github.io/rhythm.css/test
 
 Post issues_ or fork_ it as you like.
 
@@ -51,5 +51,5 @@ download the files, then inside the folder, execute
 .. _html.css: html.css
 .. _test_doc.rst: test_doc.rst
 .. _GhostWriter: http://ghost.jollygoodthemes.com/ghostwriter/
-.. _issues: https://github.com/Rykka/rst-html-theme/issues
-.. _fork: https://github.com/Rykka/rst-html-theme
+.. _issues: https://github.com/Rykka/rhythm.css/issues
+.. _fork: https://github.com/Rykka/rhythm.css
