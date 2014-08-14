@@ -7,8 +7,23 @@ body {
 }
 
 a {
-  color: @brand-primary;
+  color: @a-color;
+  text-decoration: none;
 }
+
+p {
+line-height: 1.4;
+margin: 0 0 @margin-base-vertical;
+}
+
+a:hover { text-decoration: underline; }
+pre {
+  margin-bottom: @margin-large-vertical;
+}
+img {
+  margin: @margin-base-vertical 0;
+}
+
 // Basic: transition {{{2
 hr.docutils {
 border: none;
@@ -42,8 +57,9 @@ margin-bottom: @margin-small-vertical }
 
 dl.docutils dt {
 margin-top: @margin-large-vertical;
+margin-bottom: @margin-small-vertical;
 font-weight: bold;
-margin-bottom: @margin-small-vertical }
+ }
 
 span.classifier {
 font-style: oblique }
@@ -53,12 +69,22 @@ font-weight: bold }
 
 // List: bullet & enumerated {{{2 
 ul, ol {
-  margin: 0 0 @margin-large-vertical @margin-large-vertical;
-padding: 0; }
+  line-height: 1.2;
+  margin: 0 0 @margin-large-vertical @margin-small-vertical;
+  padding: 0; 
+}
 ul ul, ul ol, ol ul, ol ol {
-margin: 0.8em 0 0 @margin-large-vertical; }
-ul li, ol li { margin: 0 0 @margin-small-vertical; }
-
+  margin: @margin-base-vertical 0 0 @margin-large-vertical;
+}
+ul li, ol li { 
+  margin: 0 0 @margin-base-vertical  @margin-small-vertical;
+}
+ul.auto-toc li{
+  margin: 0 0 @margin-small-vertical  @margin-small-vertical;
+}
+ ul.auto-toc ul {
+  margin: @margin-small-vertical;
+ }
 ol.simple, ul.simple {
 margin-bottom: @line-height-computed }
 
@@ -104,6 +130,7 @@ table.docutils {
   { border: none; }
 }
 
+
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th { background-color:
 @table-odd-background; }
@@ -124,11 +151,13 @@ table.citation {
   border-left: solid 1px @gray-base;
   margin-left: 1px 
 }
-
-
 // :field: item 
 table.field-list {
   width: auto;
+}
+
+table.option-list {
+  border: 1px dotted @table-border-color;
 }
 
 // :field: item 
@@ -157,10 +186,12 @@ vertical-align: top }
 table.docinfo td { padding: @margin-small-vertical;  }
 
 table.docutils th.field-name, table.docinfo th.docinfo-name {
+  line-height: 1.2;
   font-weight: bold ;
   text-align: left ;
   white-space: nowrap ;
-padding: @padding-small-vertical;  }
+  padding: @margin-small-vertical;
+}
 
 
 // Blockquote {{{2
@@ -199,10 +230,12 @@ div.line-block div.line-block {
 
 pre {
   padding: @line-height-computed;
+  line-height: 1.4;
 }
 
 
 pre.doctest-block {
+  border: 1px dotted @code-block-border-color;
   margin-left: @margin-large-vertical ;
   margin-right: @margin-large-vertical;
   background-color: @doctest-block-background;
@@ -221,12 +254,16 @@ pre.code .ln { // line numbers
   color: grey;
 }
   
-pre.code {
-  border: 1px dotted @code-block-border-color;
+
+.literal, .literal-block {
+  border: 1px dotted @literal-block-border-color;
+  background-color: @literal-block-background;
 }
 
-.code, .literal, .literal-block {
-  background-color: @literal-block-background;
+pre.code.literal-block {
+  border: 1px dotted @code-block-border-color;
+  color: @code-block-font-color;
+  background-color: @code-block-background;
 }
 
 // Inline Literal 
@@ -243,7 +280,7 @@ cite { }
 div.admonition, div.attention, div.caution, div.danger, div.error,
 div.hint, div.important, div.note, div.tip, div.warning {
   margin: @margin-large-vertical ;
-  border: 1px dotted;
+  border: 1px dotted @note-border-color;
 padding: @line-height-computed }
 
 div.admonition p.admonition-title, div.hint p.admonition-title,
@@ -254,7 +291,7 @@ font-family: @font-family-sans-serif }
 
 div.attention p.admonition-title, div.caution p.admonition-title,
 div.danger p.admonition-title, div.error p.admonition-title,
-div.warning p.admonition-title {
+div.warning p.admonition-tiertle {
   color: @brand-danger;
   font-weight: bold ;
 font-family: @font-family-sans-serif }
@@ -285,7 +322,7 @@ font-size: medium }
 p.rubric {
   font-weight: bold ;
   font-size: larger ;
-  color: @brand-success;
+  color: @rubric-color;
 text-align: center }
 
 p.sidebar-title {
@@ -373,7 +410,7 @@ div.system-messages h1 {
 color: @brand-danger; }
 
 div.system-message {
-  border: medium solid;
+  border: medium solid @system-border-color;
   margin: @line-height-computed;
 padding: @line-height-computed }
 

@@ -33,8 +33,9 @@
 @font-family-serif: Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
-@font-family-base: @font-family-sans-serif;
-@font-size-base: 14px;
+@font-family-open: "Open Sans", arial, sans-serif;
+@font-family-base: @font-family-open;
+@font-size-base: 18px;
 @font-size-large: ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small: ceil((@font-size-base * 0.85)); // ~12px
 @font-size-h1: floor((@font-size-base * 2.6)); // ~36px
@@ -267,18 +268,24 @@
 
 
 @margin-base-vertical: @line-height-computed ;
-@margin-large-vertical: @line-height-computed * 1.4;
-@margin-small-vertical:  @line-height-computed * 0.5 ;
-@margin-tiny-vertical:  @line-height-computed * 0.1 ;
-@margin-huge-vertical: @line-height-computed * 3;
+@margin-large-vertical: (@line-height-computed * 1.4);
+@margin-small-vertical:  (@line-height-computed * 0.4) ;
+@margin-tiny-vertical: ( @line-height-computed * 0.1);
+@margin-huge-vertical: (@line-height-computed * 3);
 
 @hr-border-color: @gray-lighter;
 @table-border-color: #AEADAD;
 @table-odd-background: #F7F7F3;
 @line-block-background: #F7F7F7;
 @literal-block-background: #F7F7F7;
-@code-block-border-color: #333333;
+@literal-block-border-color: #CACBCC;
+@code-block-background: #141412;
+@code-block-border-color: #CCCCB4;
+@code-block-font-color: #FAF7ED;
 @doctest-block-background: #F7F5E4;
-@sidebar-background: @line-block-background;
+@sidebar-background: @doctest-block-background;
 @body-bg: #fefefe;
-
+@a-color: #279CF5;
+@note-border-color: @gray-lighter;
+@rubric-color: #72EB3B;
+@system-border-color: #999;
