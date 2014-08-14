@@ -59,8 +59,9 @@ Usage
 TODO
 ----
 
-- Add less support.
+- [X] 2014-08-15 Add less support.
 - Add bare html support.
+- Add more themes.
 
 
 .. _riv.vim: http://github.com/rykka/riv.vim

@@ -1,11 +1,15 @@
 module.exports = function (grunt) {
+    'use strict';
 
+    var path = require('path');
 
   // Project configuration.
   grunt.initConfig({
 
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
+    cssPath: path.join(__dirname, 'dist/css/rhythm.css'),
+    synPath: path.join(__dirname, 'dist/syntax/molokai.css'),
     banner: '/*!\n' +
             ' * Rhythm.css v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2014-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
@@ -66,6 +70,16 @@ module.exports = function (grunt) {
     exec: {
       npmUpdate: {
         command: 'npm update'
+      },
+      test: {
+        command: 'rst2html.py doc/rst_syntax.rst ' + 
+                    '--stylesheet=<%= cssPath %>,<%= synPath %> ' +
+                    '--syntax-highlight=short ' +
+                    '--link-stylesheet ' +
+                    '> test/rst_syntax.html ' 
+      },
+      browse: {
+        command: 'firefox test/rst_syntax.html' 
       }
     }
   });
@@ -85,5 +99,6 @@ module.exports = function (grunt) {
 
   // Default task.
   grunt.registerTask('default', ['dist']);
+  grunt.registerTask('test', ['exec:test', 'exec:browse']);
 
 };
