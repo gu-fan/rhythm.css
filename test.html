@@ -728,6 +728,11 @@ table.borderless td, table.borderless th {
     margin-top: 1em ;
   margin-bottom: 1em }
 
+  div.line-block div.line {
+      background-color: #F7F7F7;
+      margin-top: 0.1em;
+      margin-bottom: 0.1em;
+  }
   div.line-block div.line-block {
     margin-top: 0 ;
     margin-bottom: 0 ;
@@ -939,71 +944,69 @@ table.borderless td, table.borderless th {
   /*}}}*/
 /*  vim: set sw=2 fdm=marker  */
 
+
 </style>
 <style type="text/css">
 
-pre.code  .hll { background-color: #ffffcc }
-pre.code   { background: #ffffff; }
-pre.code  .c { color: #666666; font-style: italic } /* Comment */
-pre.code  .err { color: #FF0000; background-color: #FFAAAA } /* Error */
-pre.code  .k { color: #228899; font-weight: bold } /* Keyword */
-pre.code  .o { color: #333333 } /* Operator */
-pre.code  .cm { color: #666666; font-style: italic } /* Comment.Multiline */
-pre.code  .cp { color: #557799 } /* Comment.Preproc */
-pre.code  .c1 { color: #666666; font-style: italic } /* Comment.Single */
-pre.code  .cs { color: #cc0000; font-weight: bold; font-style: italic } /* Comment.Special */
-pre.code  .gd { color: #A00000 } /* Generic.Deleted */
+pre.code   { background: #272822; color: #f8f8f2 }
+pre.code  .c { color: #75715e } /* Comment */
+pre.code  .err { color: #960050; background-color: #1e0010 } /* Error */
+pre.code  .k { color: #66d9ef } /* Keyword */
+pre.code  .l { color: #ae81ff } /* Literal */
+pre.code  .n { color: #f8f8f2 } /* Name */
+pre.code  .o { color: #f92672 } /* Operator */
+pre.code  .p { color: #f8f8f2 } /* Punctuation */
+pre.code  .cm { color: #75715e } /* Comment.Multiline */
+pre.code  .cp { color: #75715e } /* Comment.Preproc */
+pre.code  .c1 { color: #75715e } /* Comment.Single */
+pre.code  .cs { color: #75715e } /* Comment.Special */
 pre.code  .ge { font-style: italic } /* Generic.Emph */
-pre.code  .gr { color: #FF0000 } /* Generic.Error */
-pre.code  .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-pre.code  .gi { color: #00A000 } /* Generic.Inserted */
-pre.code  .go { color: #888888 } /* Generic.Output */
-pre.code  .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
 pre.code  .gs { font-weight: bold } /* Generic.Strong */
-pre.code  .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-pre.code  .gt { color: #0044DD } /* Generic.Traceback */
-pre.code  .kc { color: #228899; font-weight: bold } /* Keyword.Constant */
-pre.code  .kd { color: #228899; font-weight: bold } /* Keyword.Declaration */
-pre.code  .kn { color: #228899; font-weight: bold } /* Keyword.Namespace */
-pre.code  .kp { color: #0088ff; font-weight: bold } /* Keyword.Pseudo */
-pre.code  .kr { color: #228899; font-weight: bold } /* Keyword.Reserved */
-pre.code  .kt { color: #6666ff; font-weight: bold } /* Keyword.Type */
-pre.code  .m { color: #6600EE; font-weight: bold } /* Literal.Number */
-pre.code  .s { background-color: #e0e0ff } /* Literal.String */
-pre.code  .na { color: #000077 } /* Name.Attribute */
-pre.code  .nb { color: #007722 } /* Name.Builtin */
-pre.code  .nc { color: #ee99ee; font-weight: bold } /* Name.Class */
-pre.code  .no { color: #55eedd; font-weight: bold } /* Name.Constant */
-pre.code  .nd { color: #555555; font-weight: bold } /* Name.Decorator */
-pre.code  .ni { color: #880000 } /* Name.Entity */
-pre.code  .ne { color: #FF0000; font-weight: bold } /* Name.Exception */
-pre.code  .nf { color: #55eedd; font-weight: bold } /* Name.Function */
-pre.code  .nl { color: #997700; font-weight: bold } /* Name.Label */
-pre.code  .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
-pre.code  .nt { color: #007700 } /* Name.Tag */
-pre.code  .nv { color: #003366 } /* Name.Variable */
-pre.code  .ow { color: #000000; font-weight: bold } /* Operator.Word */
-pre.code  .w { color: #bbbbbb } /* Text.Whitespace */
-pre.code  .mf { color: #6600EE; font-weight: bold } /* Literal.Number.Float */
-pre.code  .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
-pre.code  .mi { color: #6666ff; font-weight: bold } /* Literal.Number.Integer */
-pre.code  .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
-pre.code  .sb { background-color: #e0e0ff } /* Literal.String.Backtick */
-pre.code  .sc { color: #8888FF } /* Literal.String.Char */
-pre.code  .sd { color: #DD4422 } /* Literal.String.Doc */
-pre.code  .s2 { background-color: #e0e0ff } /* Literal.String.Double */
-pre.code  .se { color: #666666; font-weight: bold; background-color: #e0e0ff } /* Literal.String.Escape */
-pre.code  .sh { background-color: #e0e0ff } /* Literal.String.Heredoc */
-pre.code  .si { background-color: #eeeeee } /* Literal.String.Interpol */
-pre.code  .sx { color: #ff8888; background-color: #e0e0ff } /* Literal.String.Other */
-pre.code  .sr { color: #000000; background-color: #e0e0ff } /* Literal.String.Regex */
-pre.code  .s1 { background-color: #e0e0ff } /* Literal.String.Single */
-pre.code  .ss { color: #ffcc88 } /* Literal.String.Symbol */
-pre.code  .bp { color: #007722 } /* Name.Builtin.Pseudo */
-pre.code  .vc { color: #ccccff } /* Name.Variable.Class */
-pre.code  .vg { color: #ff8844 } /* Name.Variable.Global */
-pre.code  .vi { color: #aaaaff } /* Name.Variable.Instance */
-pre.code  .il { color: #6666ff; font-weight: bold } /* Literal.Number.Integer.Long */
+pre.code  .kc { color: #66d9ef } /* Keyword.Constant */
+pre.code  .kd { color: #66d9ef } /* Keyword.Declaration */
+pre.code  .kn { color: #f92672 } /* Keyword.Namespace */
+pre.code  .kp { color: #66d9ef } /* Keyword.Pseudo */
+pre.code  .kr { color: #66d9ef } /* Keyword.Reserved */
+pre.code  .kt { color: #66d9ef } /* Keyword.Type */
+pre.code  .ld { color: #e6db74 } /* Literal.Date */
+pre.code  .m { color: #ae81ff } /* Literal.Number */
+pre.code  .s { color: #e6db74 } /* Literal.String */
+pre.code  .na { color: #a6e22e } /* Name.Attribute */
+pre.code  .nb { color: #f8f8f2 } /* Name.Builtin */
+pre.code  .nc { color: #a6e22e } /* Name.Class */
+pre.code  .no { color: #66d9ef } /* Name.Constant */
+pre.code  .nd { color: #a6e22e } /* Name.Decorator */
+pre.code  .ni { color: #f8f8f2 } /* Name.Entity */
+pre.code  .ne { color: #a6e22e } /* Name.Exception */
+pre.code  .nf { color: #a6e22e } /* Name.Function */
+pre.code  .nl { color: #f8f8f2 } /* Name.Label */
+pre.code  .nn { color: #f8f8f2 } /* Name.Namespace */
+pre.code  .nx { color: #a6e22e } /* Name.Other */
+pre.code  .py { color: #f8f8f2 } /* Name.Property */
+pre.code  .nt { color: #f92672 } /* Name.Tag */
+pre.code  .nv { color: #f8f8f2 } /* Name.Variable */
+pre.code  .ow { color: #f92672 } /* Operator.Word */
+pre.code  .w { color: #f8f8f2 } /* Text.Whitespace */
+pre.code  .mf { color: #ae81ff } /* Literal.Number.Float */
+pre.code  .mh { color: #ae81ff } /* Literal.Number.Hex */
+pre.code  .mi { color: #ae81ff } /* Literal.Number.Integer */
+pre.code  .mo { color: #ae81ff } /* Literal.Number.Oct */
+pre.code  .sb { color: #e6db74 } /* Literal.String.Backtick */
+pre.code  .sc { color: #e6db74 } /* Literal.String.Char */
+pre.code  .sd { color: #e6db74 } /* Literal.String.Doc */
+pre.code  .s2 { color: #e6db74 } /* Literal.String.Double */
+pre.code  .se { color: #ae81ff } /* Literal.String.Escape */
+pre.code  .sh { color: #e6db74 } /* Literal.String.Heredoc */
+pre.code  .si { color: #e6db74 } /* Literal.String.Interpol */
+pre.code  .sx { color: #e6db74 } /* Literal.String.Other */
+pre.code  .sr { color: #e6db74 } /* Literal.String.Regex */
+pre.code  .s1 { color: #e6db74 } /* Literal.String.Single */
+pre.code  .ss { color: #e6db74 } /* Literal.String.Symbol */
+pre.code  .bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+pre.code  .vc { color: #f8f8f2 } /* Name.Variable.Class */
+pre.code  .vg { color: #f8f8f2 } /* Name.Variable.Global */
+pre.code  .vi { color: #f8f8f2 } /* Name.Variable.Instance */
+pre.code  .il { color: #ae81ff } /* Literal.Number.Integer.Long */
 
 </style>
 <style type="text/css">
@@ -1319,15 +1322,35 @@ span.boxed, span.framebox {
 </li>
 </ul>
 </div>
+<p>raw:</p>
+<pre class="literal-block">
+###################
+Rst-Html-Theme-Test
+###################
+
+:version: table.docinfo
+:author:  author &lt;author&#64;mail.com&gt;
+:dedication: dedication.topic
+
+.. contents::
+</pre>
 <div class="section" id="div-section-h2">
 <h1><a class="toc-backref" href="#id5">1&nbsp;&nbsp;&nbsp;div.section h2</a></h1>
 <blockquote>
 <p>blockquote</p>
 <p class="attribution">&mdash;.attribution</p>
 </blockquote>
+<p>raw:</p>
+<pre class="literal-block">
+div.section h2
+==============
+
+    blockquote
+
+    -- .attribution
+</pre>
 <div class="section" id="inline-markups">
 <h2><a class="toc-backref" href="#id6">1.1&nbsp;&nbsp;&nbsp;Inline markups</a></h2>
-<blockquote>
 <p><tt class="docutils literal">tt.literal</tt></p>
 <p><strong>strong</strong></p>
 <p><em>em</em></p>
@@ -1349,7 +1372,14 @@ span.boxed, span.framebox {
 
 .. |subtext| replace:: substitution with *hello*
 </pre>
-</blockquote>
+<p>transition: hr.docutils</p>
+<hr class="docutils" />
+<p>raw:</p>
+<pre class="literal-block">
+transition: hr.docutils
+
+----
+</pre>
 </div>
 <div class="section" id="lists">
 <h2><a class="toc-backref" href="#id7">1.2&nbsp;&nbsp;&nbsp;Lists</a></h2>
@@ -1384,1656 +1414,30 @@ span.boxed, span.framebox {
 </ol>
 </li>
 </ul>
-<p>table.field-list</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field"><th class="field-name">th.field-name:</th><td class="field-body">td.field-body</td>
-</tr>
-</tbody>
-</table>
-<p>definition list: dl</p>
-<dl class="docutils">
-<dt>dt what</dt>
-<dd>dd Definition lists associate a term with a definition.</dd>
-<dt>term 4 <span class="classifier-delimiter">:</span> <span class="classifier">span.classifier one</span> <span class="classifier-delimiter">:</span> <span class="classifier">classifier two</span></dt>
-<dd>Definition 4.</dd>
-</dl>
-<p>table.option-list</p>
-<table class="docutils option-list" frame="void" rules="none">
-<col class="option" />
-<col class="description" />
-<tbody valign="top">
-<tr><td class="option-group">
-<kbd><span class="option">-t <var>option</var></span></kbd></td>
-<td>td.option-group : td</td></tr>
-<tr><td class="option-group">
-<kbd><span class="option">-a</span></kbd></td>
-<td>command-line option &quot;a&quot;</td></tr>
-<tr><td class="option-group">
-<kbd><span class="option">-b <var>file</var></span></kbd></td>
-<td>options can have arguments
-and long descriptions</td></tr>
-<tr><td class="option-group">
-<kbd><span class="option">--long</span></kbd></td>
-<td>options can be long also</td></tr>
-</tbody>
-</table>
-<p>transition: hr.docutils</p>
-</div>
-<hr class="docutils" />
-<div class="section" id="blocks">
-<h2><a class="toc-backref" href="#id8">1.3&nbsp;&nbsp;&nbsp;Blocks</a></h2>
-<p>pre.literal-block:</p>
-<pre class="literal-block">
-Where is the Cat?
-
-Do you see it?
-</pre>
-<p>div.line-block</p>
-<div class="line-block">
-<div class="line">div.line line 1</div>
-<div class="line">div.line line 2</div>
-</div>
-<p>doctest block</p>
-<pre class="doctest-block">
-&gt;&gt;&gt; pre.doctest-block
-Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;
-&gt;&gt;&gt; print '(cut and pasted from interactive Python sessions)'
-(cut and pasted from interactive Python sessions)
-</pre>
-</div>
-<div class="section" id="tables">
-<h2><a class="toc-backref" href="#id9">1.4&nbsp;&nbsp;&nbsp;Tables</a></h2>
-<p>table.docutils</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead valign="bottom">
-<tr><th class="head">th.head</th>
-<th class="head">th.head</th>
-<th class="head">th.head</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr><td>td</td>
-<td>td</td>
-<td>&nbsp;</td>
-</tr>
-<tr><td>td</td>
-<td>td</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p>Table without head</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="27%" />
-<col width="33%" />
-<col width="40%" />
-</colgroup>
-<tbody valign="top">
-<tr><td>td</td>
-<td>td</td>
-<td>td</td>
-</tr>
-<tr><td>td</td>
-<td>td</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p>simple table</p>
-<p>table.docutils</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="63%" />
-<col width="38%" />
-</colgroup>
-<thead valign="bottom">
-<tr><th class="head">aefe1</th>
-<th class="head">a2</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr><td>aefe1</td>
-<td>a2</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="links">
-<h2><a class="toc-backref" href="#id10">1.5&nbsp;&nbsp;&nbsp;Links</a></h2>
-<blockquote>
-<p>a.reference.external
-<a class="reference external" href="mailto:test&#64;mail.com">test&#64;mail.com</a>
-<a class="reference external" href="http://github.com">http://github.com</a>
-<a class="reference external" href="ftp://usr&#64;10.0.2.10:3322">ftp://usr&#64;10.0.2.10:3322</a>
-<a class="reference external" href="http://github.com">github</a>
-<a class="reference external" href="http://www.python.org">embedded uri</a>
-<a class="reference external" href="test">anoymous</a>
-substition reference <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a></p>
-<p>a.footnote.reference <a class="footnote-reference" href="#id4" id="id1">[1]</a></p>
-<p>a.citation.reference <a class="citation-reference" href="#test" id="id2">[Test]</a></p>
-</blockquote>
-</div>
-<div class="section" id="directives">
-<h2><a class="toc-backref" href="#id11">1.6&nbsp;&nbsp;&nbsp;Directives</a></h2>
-<blockquote>
-code: pre.code.python.literal-block</blockquote>
-<pre class="code python literal-block">
-<span class="c">#!/usr/bin/python</span>
-<span class="c"># -*- coding: utf-8 -*-</span>
-<span class="sd">&quot;&quot;&quot;Check NetApp Volumes for Volumes which are not Guarantee NONE
-DV1&#64;au.de 2014
-&quot;&quot;&quot;</span>
-
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">shutil</span>
-<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-<span class="kn">import</span> <span class="nn">binascii</span>
-
-<span class="kn">from</span> <span class="nn">NaServer</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">NaElement</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="k">def</span> <span class="nf">print_usage</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Parameter Usage Print on Console&quot;&quot;&quot;</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'Usage: main.py &lt;filer&gt; &lt;user&gt; &lt;password&gt;</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'&lt;filer&gt; -- Filer name</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'&lt;user&gt; -- User name</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'&lt;password&gt; -- Password</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="c"># Anzahl der Parameter pruefen</span>
-<span class="n">COM_ARG</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="k">if</span> <span class="n">COM_ARG</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="n">print_usage</span><span class="p">()</span>
-</pre>
-<hr class="docutils" />
-<blockquote>
-image/figure: img</blockquote>
-<img alt="http://i4.minus.com/iblu46uOQ0N7Jx.jpg" src="http://i4.minus.com/iblu46uOQ0N7Jx.jpg" />
-<hr class="docutils" />
-<p>admonition</p>
-<div class="danger">
-<p class="first admonition-title">!DANGER!</p>
-<p class="last">Watch out, Bears!</p>
-</div>
-<div class="caution">
-<p class="first admonition-title">Caution!</p>
-<p class="last">Beware killer rabbits!</p>
-</div>
-<div class="warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Take care of your self</p>
-</div>
-<div class="important">
-<p class="first admonition-title">Important</p>
-<p class="last">Remember the gold</p>
-</div>
-<div class="hint">
-<p class="first admonition-title">Hint</p>
-<p class="last">What about one more shot?</p>
-</div>
-<hr class="docutils" />
-<p>epigraph</p>
-<blockquote class="epigraph">
-No matter where you go, there you are.</blockquote>
-<hr class="docutils" />
-<p>p.rubic</p>
-<p class="rubric"><em>rubric</em> p.rubric</p>
-<p>div.formular</p>
-<div class="formula">
-<i>Î</i>±<sub><i>t</i></sub>(<i>i</i>) = <i>P</i>(<i>O</i><sub>1</sub>, <i>O</i><sub>2</sub>, <i>â</i>€¦<i>O</i><sub><i>t</i></sub>, <i>q</i><sub><i>t</i></sub> = <i>S</i><sub><i>i</i></sub><i>Î</i>»)
-</div>
-<p>div.sidebar</p>
-<div class="sidebar">
-<p class="first sidebar-title">div.sidebar-title</p>
-<p class="sidebar-subtitle">div.sidebar-subtitle</p>
-<p>p.last</p>
-<p class="last">Subsequent indented lines comprise
-the body of the sidebar, and are
-interpreted as body elements.</p>
-</div>
-<p>div.topic</p>
-<div class="topic">
-<p class="topic-title first">p.topic-title</p>
-<p>Subsequent indented lines comprise
-the body of the topic, and are
-interpreted as body elements.</p>
-</div>
-<hr class="docutils" />
-<p><strong>option</strong></p>
-<p>sectnum: auto add section number</p>
-</div>
-<div class="section" id="docutils-system">
-<h2><a class="toc-backref" href="#id12">1.7&nbsp;&nbsp;&nbsp;Docutils System</a></h2>
-<blockquote>
-<p>error: unknown target
-span.problematic <a href="#id13"><span class="problematic" id="id14">notar_</span></a></p>
-<p>warning: unexpected indent</p>
-</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/ryk/github/rst-html-theme/test_doc.rst</tt>, line 293)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<!-- unexpected indent -->
-<p>div.system-messages</p>
-<p>div.system-message</p>
-<p>p.system-message-title</p>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>table.footnote</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="test" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[Test]</a></td><td>table.citation</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="system-messages section">
-<h1>Docutils System Messages</h1>
-<div class="system-message" id="id13">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/ryk/github/rst-html-theme/test_doc.rst</tt>, line 288); <em><a href="#id14">backlink</a></em></p>
-Unknown target name: &quot;notar&quot;.</div>
-</div>
-</div>
-</body>
-</html>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.11: http://docutils.sourceforge.net/" />
-<title>Rst-Html-Theme-Test</title>
-<meta name="author" content="author &lt;author&#64;mail.com&gt;" />
-<style type="text/css">
-
-/* normalize {{{ */
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
-
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-
-html {
-  font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/**
- * Remove default margin.
- */
-
-body {
-  margin: 0;
-}
-
-/* HTML5 display definitions
-========================================================================== */
-
-/**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
- */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
- */
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
- */
-
-[hidden],
-template {
-  display: none;
-}
-
-/* Links
-========================================================================== */
-
-/**
- * Remove the gray background color from active links in IE 10.
- */
-
-a {
-  background: transparent;
-}
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* Text-level semantics
-========================================================================== */
-
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-
-b,
-strong {
-  font-weight: bold;
-}
-
-/**
- * Address styling not present in Safari and Chrome.
- */
-
-dfn {
-  font-style: italic;
-}
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-/* Embedded content
-========================================================================== */
-
-/**
- * Remove border when inside `a` element in IE 8/9/10.
- */
-
-img {
-  border: 0;
-}
-
-/**
- * Correct overflow not hidden in IE 9/10/11.
- */
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* Grouping content
-========================================================================== */
-
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-
-figure {
-  margin: 1em 40px;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Contain overflow in all browsers.
- */
-
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
- */
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-/* Forms
-========================================================================== */
-
-/**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit; /* 1 */
-  font: inherit; /* 2 */
-  margin: 0; /* 3 */
-}
-
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
- */
-
-button {
-  overflow: visible;
-}
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
- */
-
-button,
-select {
-  text-transform: none;
-}
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-
-button,
-html input[type="button"], /* 1 */
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
- */
-
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-
-input {
-  line-height: normal;
-}
-
-/**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
- */
-
-input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box; /* 2 */
-  box-sizing: content-box;
-}
-
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Define consistent border, margin, and padding.
- */
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-
-legend {
-  border: 0; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Remove default vertical scrollbar in IE 8/9/10/11.
- */
-
-textarea {
-  overflow: auto;
-}
-
-/**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
- */
-
-optgroup {
-  font-weight: bold;
-}
-
-/* Tables
-========================================================================== */
-
-/**
- * Remove most spacing between table cells.
- */
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
-  padding: 0;
-} /*}}}*/
-/* Font basic {{{ */
-body {
-  background: #fefefe;
-  color: #424242;
-  font-family: "Open Sans", arial, sans-serif;
-font-size: 18px; }
-
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 33px;
-text-transform: none; }
-
-h1 {
-font-size: 26px; }
-
-h2 {
-font-size: 24px; }
-
-h3 {
-  font-size: 20px;
-margin-bottom: 20px; }
-
-h4 {
-  font-size: 18px;
-margin-bottom: 18px; }
-
-h5 {
-  font-size: 16px;
-margin-bottom: 15px; }
-
-h6 {
-  font-size: 14px;
-margin-bottom: 12px; }
-
-p {
-  line-height: 1.2;
-margin: 0 0 30px; }
-
-a { color: #F03838;
-text-decoration: none; }
-a:hover { text-decoration: underline; }
-/*}}}*/
-/* Document media size {{{*/
-.document {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-}
-@media (min-width:320px) { 
-/* smartphones, iPhone, portrait 480x320 phones */ 
-    .document { width: auto; }
-}
-@media (min-width:481px) {
-/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
-    .document { width: auto; }
-}
-@media (min-width:641px) {
-/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-    .document { width: 620px; }
-}
-@media (min-width:961px) {
-/* tablet, landscape iPad, lo-res laptops ands desktops */ 
-    .document { width: 940px; }
-}
-@media (min-width:1025px) {
-/* big landscape tablets, laptops, and desktops */ 
-    .document { width: 940px; }
-}
-@media (min-width:1281px) {
-/* hi-res laptops and desktops */
-    .document { width: 940px; }
-}
-/*}}}*/
-/* html4css {{{*/
-/*
- * changed from docutils's html4css
- * http://docutils.sf.net/docs/howto/html-stylesheets.html 
- */
-/* Basic setting {{{*/
-/* used to remove borders from tables and images */
-.borderless, table.borderless td, table.borderless th {
-border: 0 }
-
-table.borderless td, table.borderless th {
-  /* Override padding for "table.docutils td" with "! important".
-  The right padding separates the table cells. */
-  padding: 0 0.5em 0 0 ! important }
-
-  .first {
-    /* Override more specific margin styles with "! important". */
-  margin-top: 0 ! important }
-
-  .last, .with-subtitle {
-  margin-bottom: 0 ! important }
-
-  .hidden {
-  display: none }
-
-  /*}}}*/
-  /* Basic: align {{{*/
-  .align-left {
-  text-align: left }
-
-  .align-center {
-    clear: both ;
-  text-align: center }
-
-  .align-right {
-  text-align: right }
-
-  /* reset inner alignment in figures */
-  div.align-right {
-  text-align: inherit }
-
-  /* div.align-center * { */
-  /*   text-align: left } */
-
-  /*}}}*/
-  /* Basic: transition {{{*/
-  hr.docutils {
-    border: none;
-    border-bottom: 1px dashed #999997;
-    margin: 45px 0;
-  }
-  /*}}}*/
-  /* Section:title {{{*/
-
-  h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
-  h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
-  margin-top: 0.4em }
-
-  h1.title {
-  text-align: center }
-
-  h2.subtitle {
-  text-align: center }
-
-  span.section-subtitle {
-    /* font-size relative to parent (h1..h6 element) */
-  font-size: 80% }
-
-  .title {
-    font-size: 42px;
-    font-weight: bold;
-  }
-
-  /*}}}*/
-  /* List: definition list {{{*/
-  dl.docutils dd {
-  margin-bottom: 0.5em }
-
-  dl.docutils dt {
-  font-weight: bold }
-
-  span.classifier {
-  font-style: oblique }
-
-  span.classifier-delimiter {
-  font-weight: bold }
-  /*}}}*/
-  /* List: bullet & enumerated {{{ */
-  ul, ol {
-    line-height: 1.2;
-    margin: 0 0 2em 1.2em;
-  padding: 0; }
-  ul ul, ul ol, ol ul, ol ol {
-  margin: 0.8em 0 0 1.2em; }
-  ul li, ol li { margin: 0 0 10px; }
-  ol.simple, ul.simple {
-  margin-bottom: 1em }
-
-  ol.arabic {
-  list-style: decimal }
-
-  ol.loweralpha {
-  list-style: lower-alpha }
-
-  ol.upperalpha {
-  list-style: upper-alpha }
-
-  ol.lowerroman {
-  list-style: lower-roman }
-
-  ol.upperroman {
-  list-style: upper-roman }
-  /*}}}*/
-  /* Tables: include fieldlist/footnote/docinfo/etc {{{*/
-  /* all table in docutls */
-  table.docutils { margin-top: 0.5em ; margin-bottom: 2em; width: 100%; }
-  table.docutils th { padding: 0.5em; text-align: left; }
-  table.docutils td { padding: 0.5em; }
-  table.docutils th,
-  table.docutils tr,
-  table.docutils td { border: 1px dotted #AEADAD; }
-  table.docutils th { border-bottom: 1px solid #AEADAD; }
-
-  table.docutils.citation th,
-  table.docutils.citation tr,
-  table.docutils.citation td,
-  table.docutils.footnote th,
-  table.docutils.footnote tr,
-  table.docutils.footnote td,
-  table.docutils.field-list th,
-  table.docutils.field-list tr,
-  table.docutils.field-list td,
-  table.docutils.option-list th,
-  table.docutils.option-list tr,
-  table.docutils.option-list td,
-  table.docutils.docinfo th,
-  table.docutils.docinfo tr,
-  table.docutils.docinfo td
-  { border: none; }
-
-  table tbody > tr:nth-child(odd) > td,
-  table tbody > tr:nth-child(odd) > th { background-color: #f7f7f3; }
-
-  table.field-list tbody > tr:nth-child(odd) > td,
-  table.field-list tbody > tr:nth-child(odd) > th,
-  table.footnote tbody > tr:nth-child(odd) > td,
-  table.footnote tbody > tr:nth-child(odd) > th,
-  table.citation tbody > tr:nth-child(odd) > td,
-  table.citation tbody > tr:nth-child(odd) > th,
-  table.docinfo tbody > tr:nth-child(odd) > td,
-  table.docinfo tbody > tr:nth-child(odd) > th { background-color: transparent; }
-
-  /* [test]_ */
-  table.citation {
-    width: auto;
-    border-left: solid 1px gray;
-    margin-left: 1px 
-  }
-
-
-  /* :field: item */
-  table.field-list {
-    width: auto;
-  }
-
-  /* :field: item */
-  table.option-list { }
-  span.option { white-space: nowrap }
-
-  /* :version: item */
-  table.docinfo {
-    width: auto;
-  margin: 2em 4em }
-
-
-  /* [1] */
-  table.footnote {
-    width: auto;
-    border-left: solid 1px black;
-  margin-left: 1px }
-    
-  p.label { white-space: nowrap }
-
-  table.docutils td, table.docutils th,
-  table.docinfo td, table.docinfo th {
-    padding-left: 0.5em ;
-    padding-right: 0.5em ;
-  vertical-align: top }
-  table.docinfo td {
-    line-height: 1.2;
-  padding: 0.5em;  }
-
-  table.docutils th.field-name, table.docinfo th.docinfo-name {
-    line-height: 1.2;
-    font-weight: bold ;
-    text-align: left ;
-    white-space: nowrap ;
-  padding: 0.5em;  }
-
-  /*}}}*/
-  /* Blockquote {{{*/
-  p.attribution {
-    font-weight:bold;
-    text-align: right ;
-  margin-left: 50% }
-
-  blockquote {
-    opacity: 0.6;
-    border-left: 3px solid #DDD;
-    margin: 0 0 2em;
-    padding: 0.8em 1em; 
-  }
-
-  blockquote.epigraph {
-  margin: 2em 5em ; }
-  /*}}}*/
-  /* Block: line-block {{{*/
-  div.line-block {
-    display: block ;
-    margin-top: 1em ;
-  margin-bottom: 1em }
-
-  div.line-block div.line-block {
-    margin-top: 0 ;
-    margin-bottom: 0 ;
-  margin-left: 1.5em }
-  /*}}}*/
-  /* Block: literal-block & code {{{*/
-
-  pre {
-    padding: 1em;
-  }
-
-
-  pre.doctest-block {
-    margin-left: 2em ;
-    margin-right: 2em;
-    background-color: #F7F5E4;
-  }
-  pre.address {
-    margin-bottom: 0 ;
-    margin-top: 0 ;
-  font: inherit }
-
-  pre.literal-block, pre.doctest-block, pre.math, pre.code {
-    margin-left: 2em ;
-    margin-right: 2em
-  }
-
-  pre.code .ln { /* line numbers */
-    color: grey;
-  }
-    
-  pre.code {
-    border: 1px dotted #333333;
-  }
-
-  .code, .literal, .literal-block {
-    background-color: #F7F7F7;
-  }
-
-  /* Inline Literal */
-  tt.literal { padding: 3px; }
-
-  /* Inline interpreted text*/
-  cite { }
-
-  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
-  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils { font-size: 100% }
-
-
-  /*}}}*/
-  /* Directive: admonition */ /*{{{*/
-
-  div.admonition, div.attention, div.caution, div.danger, div.error,
-  div.hint, div.important, div.note, div.tip, div.warning {
-    margin: 2em ;
-    border: 1px dotted;
-  padding: 1em }
-
-  div.admonition p.admonition-title, div.hint p.admonition-title,
-  div.important p.admonition-title, div.note p.admonition-title,
-  div.tip p.admonition-title {
-    font-weight: bold ;
-  font-family: sans-serif }
-
-  div.attention p.admonition-title, div.caution p.admonition-title,
-  div.danger p.admonition-title, div.error p.admonition-title,
-  div.warning p.admonition-title {
-    color: #DB6270;
-    font-weight: bold ;
-  font-family: sans-serif }
-
-  div.note p.admonition-title,
-  div.important p.admonition-title{
-    color: #639FDB;
-  }
-  div.hint p.admonition-title,
-  div.tip p.admonition-title {
-    color: #57DB57;
-  }
-  /*}}}*/
-  /* Directive: sidebar/rubric{{{*/
-  div.sidebar {
-    margin: 0 0 0.5em 1em ;
-    border: 1px dotted;
-    padding: 1em ;
-    background-color: #FAFAF5;
-    width: 40% ;
-    float: right ;
-  clear: right }
-
-  div.sidebar p.rubric {
-    font-family: sans-serif ;
-  font-size: medium }
-
-  p.rubric {
-    font-weight: bold ;
-    font-size: larger ;
-    color: maroon ;
-  text-align: center }
-
-  p.sidebar-title {
-    font-family: sans-serif ;
-    font-weight: bold ;
-  font-size: larger }
-
-  p.sidebar-subtitle {
-    font-family: sans-serif ;
-  font-weight: bold }
-  /*}}}*/
-  /* Directive: image & embedded {{{*/
-  object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
-    overflow: hidden;
-  }
-
-/* a graphic with a caption */
-  div.figure {
-    margin-left: 2em ;
-    margin-right: 2em }
-  p.caption { font-style: italic }
-
-  img.align-left, .figure.align-left, object.align-left {
-    clear: left ;
-    float: left ;
-  margin-right: 1em }
-
-  img.align-right, .figure.align-right, object.align-right {
-    clear: right ;
-    float: right ;
-  margin-left: 1em }
-
-  img.align-center, .figure.align-center, object.align-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /*}}}*/
-  /* Directive: content {{{*/
-  div.topic {
-  margin: 2em }
-
-  p.topic-title {
-  font-weight: bold }
-
-  ul.auto-toc {
-  list-style-type: none }
-
-  a.toc-backref {
-    text-decoration: none ;
-  color: black }
-  /*}}}*/
-  /* Directives: misc {{{*/
-
-  div.footer, div.header {
-    clear: both;
-  font-size: smaller }
-
-  /*}}}*/
-  /* List: Bibliographic Fields {{{*/
-  div.abstract {
-  margin: 2em 5em }
-
-  div.dedication p.topic-title {
-    font-weight: bold ;
-  font-style: normal }
-
-  div.abstract p.topic-title {
-    font-weight: bold ;
-  text-align: center }
-
-  div.dedication {
-    margin: 2em 5em ;
-    text-align: center ;
-  font-style: italic }
-  /*}}}*/
-  /* Docutil:error messages */ /*{{{*/
-  span.problematic {
-  color: #993117; }
-
-  div.system-messages {
-  margin: 5em }
-
-  div.system-messages h1 {
-  color: #993117; }
-
-  div.system-message {
-    border: medium solid;
-    margin: 1em;
-  padding: 1em }
-
-  div.system-message p.system-message-title {
-    color: #993117 ;
-  font-weight: bold }
-  /*}}}*/
-  /* UNKNOW {{{*/
-
-  span.interpreted {
-  font-family: sans-serif }
-
-
-  span.pre {
-  white-space: pre }
-
-  p.credits {
-    font-style: italic ;
-  font-size: smaller }
-
-
-  /*}}}*/
-  /*}}}*/
-/*  vim: set sw=2 fdm=marker  */
-
-</style>
-<style type="text/css">
-
-pre.code  .hll { background-color: #ffffcc }
-pre.code   { background: #ffffff; }
-pre.code  .c { color: #666666; font-style: italic } /* Comment */
-pre.code  .err { color: #FF0000; background-color: #FFAAAA } /* Error */
-pre.code  .k { color: #228899; font-weight: bold } /* Keyword */
-pre.code  .o { color: #333333 } /* Operator */
-pre.code  .cm { color: #666666; font-style: italic } /* Comment.Multiline */
-pre.code  .cp { color: #557799 } /* Comment.Preproc */
-pre.code  .c1 { color: #666666; font-style: italic } /* Comment.Single */
-pre.code  .cs { color: #cc0000; font-weight: bold; font-style: italic } /* Comment.Special */
-pre.code  .gd { color: #A00000 } /* Generic.Deleted */
-pre.code  .ge { font-style: italic } /* Generic.Emph */
-pre.code  .gr { color: #FF0000 } /* Generic.Error */
-pre.code  .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-pre.code  .gi { color: #00A000 } /* Generic.Inserted */
-pre.code  .go { color: #888888 } /* Generic.Output */
-pre.code  .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
-pre.code  .gs { font-weight: bold } /* Generic.Strong */
-pre.code  .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-pre.code  .gt { color: #0044DD } /* Generic.Traceback */
-pre.code  .kc { color: #228899; font-weight: bold } /* Keyword.Constant */
-pre.code  .kd { color: #228899; font-weight: bold } /* Keyword.Declaration */
-pre.code  .kn { color: #228899; font-weight: bold } /* Keyword.Namespace */
-pre.code  .kp { color: #0088ff; font-weight: bold } /* Keyword.Pseudo */
-pre.code  .kr { color: #228899; font-weight: bold } /* Keyword.Reserved */
-pre.code  .kt { color: #6666ff; font-weight: bold } /* Keyword.Type */
-pre.code  .m { color: #6600EE; font-weight: bold } /* Literal.Number */
-pre.code  .s { background-color: #e0e0ff } /* Literal.String */
-pre.code  .na { color: #000077 } /* Name.Attribute */
-pre.code  .nb { color: #007722 } /* Name.Builtin */
-pre.code  .nc { color: #ee99ee; font-weight: bold } /* Name.Class */
-pre.code  .no { color: #55eedd; font-weight: bold } /* Name.Constant */
-pre.code  .nd { color: #555555; font-weight: bold } /* Name.Decorator */
-pre.code  .ni { color: #880000 } /* Name.Entity */
-pre.code  .ne { color: #FF0000; font-weight: bold } /* Name.Exception */
-pre.code  .nf { color: #55eedd; font-weight: bold } /* Name.Function */
-pre.code  .nl { color: #997700; font-weight: bold } /* Name.Label */
-pre.code  .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
-pre.code  .nt { color: #007700 } /* Name.Tag */
-pre.code  .nv { color: #003366 } /* Name.Variable */
-pre.code  .ow { color: #000000; font-weight: bold } /* Operator.Word */
-pre.code  .w { color: #bbbbbb } /* Text.Whitespace */
-pre.code  .mf { color: #6600EE; font-weight: bold } /* Literal.Number.Float */
-pre.code  .mh { color: #005588; font-weight: bold } /* Literal.Number.Hex */
-pre.code  .mi { color: #6666ff; font-weight: bold } /* Literal.Number.Integer */
-pre.code  .mo { color: #4400EE; font-weight: bold } /* Literal.Number.Oct */
-pre.code  .sb { background-color: #e0e0ff } /* Literal.String.Backtick */
-pre.code  .sc { color: #8888FF } /* Literal.String.Char */
-pre.code  .sd { color: #DD4422 } /* Literal.String.Doc */
-pre.code  .s2 { background-color: #e0e0ff } /* Literal.String.Double */
-pre.code  .se { color: #666666; font-weight: bold; background-color: #e0e0ff } /* Literal.String.Escape */
-pre.code  .sh { background-color: #e0e0ff } /* Literal.String.Heredoc */
-pre.code  .si { background-color: #eeeeee } /* Literal.String.Interpol */
-pre.code  .sx { color: #ff8888; background-color: #e0e0ff } /* Literal.String.Other */
-pre.code  .sr { color: #000000; background-color: #e0e0ff } /* Literal.String.Regex */
-pre.code  .s1 { background-color: #e0e0ff } /* Literal.String.Single */
-pre.code  .ss { color: #ffcc88 } /* Literal.String.Symbol */
-pre.code  .bp { color: #007722 } /* Name.Builtin.Pseudo */
-pre.code  .vc { color: #ccccff } /* Name.Variable.Class */
-pre.code  .vg { color: #ff8844 } /* Name.Variable.Global */
-pre.code  .vi { color: #aaaaff } /* Name.Variable.Instance */
-pre.code  .il { color: #6666ff; font-weight: bold } /* Literal.Number.Integer.Long */
-
-</style>
-<style type="text/css">
-
-/*
-*   math2html: convert LaTeX equations to HTML output.
-*
-*   Copyright (C) 2009,2010 Alex Fernández
-*
-*   Released under the terms of the `2-Clause BSD license'_, in short:
-*   Copying and distribution of this file, with or without modification,
-*   are permitted in any medium without royalty provided the copyright
-*   notice and this notice are preserved.
-*   This file is offered as-is, without any warranty.
-*
-* .. _2-Clause BSD license: http://www.spdx.org/licenses/BSD-2-Clause
-*
-*   Based on eLyXer: convert LyX source files to HTML output.
-*   http://elyxer.nongnu.org/
-*/
-/* --end--
-* CSS file for LaTeX formulas.
-*/
-
-/* Formulas */
-.formula {
-	text-align: center;
-	font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
-	margin: 1.2em 0;
-}
-span.formula {
-	white-space: nowrap;
-}
-div.formula {
-	padding: 0.5ex;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/* Basic features */
-a.eqnumber {
-	display: inline-block;
-	float: right;
-	clear: right;
-	font-weight: bold;
-}
-span.unknown {
-	color: #800000;
-}
-span.ignored, span.arraydef {
-	display: none;
-}
-.formula i {
-	letter-spacing: 0.1ex;
-}
-
-/* Alignment */
-.align-left, .align-l {
-	text-align: left;
-}
-.align-right, .align-r {
-	text-align: right;
-}
-.align-center, .align-c {
-	text-align: center;
-}
-
-/* Structures */
-span.overline, span.bar {
-	text-decoration: overline;
-}
-.fraction, .fullfraction {
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
-}
-.fraction .fraction {
-	font-size: 80%;
-	line-height: 100%;
-}
-span.numerator {
-	display: block;
-}
-span.denominator {
-	display: block;
-	padding: 0ex;
-	border-top: thin solid;
-}
-sup.numerator, sup.unit {
-	font-size: 70%;
-	vertical-align: 80%;
-}
-sub.denominator, sub.unit {
-	font-size: 70%;
-	vertical-align: -20%;
-}
-span.sqrt {
-	display: inline-block;
-	vertical-align: middle;
-	padding: 0.1ex;
-}
-sup.root {
-	font-size: 70%;
-	position: relative;
-	left: 1.4ex;
-}
-span.radical {
-	display: inline-block;
-	padding: 0ex;
-	font-size: 150%;
-	vertical-align: top;
-}
-span.root {
-	display: inline-block;
-	border-top: thin solid;
-	padding: 0ex;
-	vertical-align: middle;
-}
-span.symbol {
-	line-height: 125%;
-	font-size: 125%;
-}
-span.bigsymbol {
-	line-height: 150%;
-	font-size: 150%;
-}
-span.largesymbol {
-	font-size: 175%;
-}
-span.hugesymbol {
-	font-size: 200%;
-}
-span.scripts {
-	display: inline-table;
-	vertical-align: middle;
-}
-.script {
-	display: table-row;
-	text-align: left;
-	line-height: 150%;
-}
-span.limits {
-	display: inline-table;
-	vertical-align: middle;
-}
-.limit {
-	display: table-row;
-	line-height: 99%;
-}
-sup.limit, sub.limit {
-	line-height: 100%;
-}
-span.symbolover {
-	display: inline-block;
-	text-align: center;
-	position: relative;
-	float: right;
-	right: 100%;
-	bottom: 0.5em;
-	width: 0px;
-}
-span.withsymbol {
-	display: inline-block;
-}
-span.symbolunder {
-	display: inline-block;
-	text-align: center;
-	position: relative;
-	float: right;
-	right: 80%;
-	top: 0.3em;
-	width: 0px;
-}
-
-/* Environments */
-span.array, span.bracketcases, span.binomial, span.environment {
-	display: inline-table;
-	text-align: center;
-	border-collapse: collapse;
-	margin: 0em;
-	vertical-align: middle;
-}
-span.arrayrow, span.binomrow {
-	display: table-row;
-	padding: 0ex;
-	border: 0ex;
-}
-span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
-	display: table-cell;
-	padding: 0ex 0.2ex;
-	line-height: 99%;
-	border: 0ex;
-}
-/*
-* CSS file for LaTeX formulas, extra stuff:
-* binomials, vertical braces, stackrel, fonts and colors.
-*/
-
-/* Inline binomials */
-span.binom {
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
-	font-size: 80%;
-}
-span.binomstack {
-	display: block;
-	padding: 0em;
-}
-
-/* Over- and underbraces */
-span.overbrace {
-	border-top: 2pt solid;
-}
-span.underbrace {
-	border-bottom: 2pt solid;
-}
-
-/* Stackrel */
-span.stackrel {
-	display: inline-block;
-	text-align: center;
-}
-span.upstackrel {
-	display: block;
-	padding: 0em;
-	font-size: 80%;
-	line-height: 64%;
-	position: relative;
-	top: 0.15em;
-
-}
-span.downstackrel {
-	display: block;
-	vertical-align: bottom;
-	padding: 0em;
-}
-
-/* Fonts */
-span.mathsf, span.textsf {
-	font-style: normal;
-	font-family: sans-serif;
-}
-span.mathrm, span.textrm {
-	font-style: normal;
-	font-family: serif;
-}
-span.text, span.textnormal {
-	font-style: normal;
-}
-span.textipa {
-	color: #008080;
-}
-span.fraktur {
-	font-family: "Lucida Blackletter", eufm10, blackletter;
-}
-span.blackboard {
-	font-family: Blackboard, msbm10, serif;
-}
-span.scriptfont {
-	font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
-	font-style: italic;
-}
-
-/* Colors */
-span.colorbox {
-	display: inline-block;
-	padding: 5px;
-}
-span.fbox {
-	display: inline-block;
-	border: thin solid black;
-	padding: 2px;
-}
-span.boxed, span.framebox {
-	display: inline-block;
-	border: thin solid black;
-	padding: 5px;
-}
-
-
-</style>
-</head>
-<body>
-<div class="document" id="rst-html-theme-test">
-<h1 class="title">Rst-Html-Theme-Test</h1>
-<table class="docinfo" frame="void" rules="none">
-<col class="docinfo-name" />
-<col class="docinfo-content" />
-<tbody valign="top">
-<tr><th class="docinfo-name">Version:</th>
-<td>table.docinfo</td></tr>
-<tr><th class="docinfo-name">Author:</th>
-<td>author &lt;<a class="reference external" href="mailto:author&#64;mail.com">author&#64;mail.com</a>&gt;</td></tr>
-</tbody>
-</table>
-<div class="dedication topic">
-<p class="topic-title first">Dedication</p>
-<p>dedication.topic</p>
-</div>
-<div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
-<ul class="auto-toc simple">
-<li><a class="reference internal" href="#div-section-h2" id="id5">1&nbsp;&nbsp;&nbsp;div.section h2</a><ul class="auto-toc">
-<li><a class="reference internal" href="#inline-markups" id="id6">1.1&nbsp;&nbsp;&nbsp;Inline markups</a></li>
-<li><a class="reference internal" href="#lists" id="id7">1.2&nbsp;&nbsp;&nbsp;Lists</a></li>
-<li><a class="reference internal" href="#blocks" id="id8">1.3&nbsp;&nbsp;&nbsp;Blocks</a></li>
-<li><a class="reference internal" href="#tables" id="id9">1.4&nbsp;&nbsp;&nbsp;Tables</a></li>
-<li><a class="reference internal" href="#links" id="id10">1.5&nbsp;&nbsp;&nbsp;Links</a></li>
-<li><a class="reference internal" href="#directives" id="id11">1.6&nbsp;&nbsp;&nbsp;Directives</a></li>
-<li><a class="reference internal" href="#docutils-system" id="id12">1.7&nbsp;&nbsp;&nbsp;Docutils System</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="div-section-h2">
-<h1><a class="toc-backref" href="#id5">1&nbsp;&nbsp;&nbsp;div.section h2</a></h1>
-<blockquote>
-<p>blockquote</p>
-<p class="attribution">&mdash;.attribution</p>
-</blockquote>
-<div class="section" id="inline-markups">
-<h2><a class="toc-backref" href="#id6">1.1&nbsp;&nbsp;&nbsp;Inline markups</a></h2>
-<blockquote>
-<p><tt class="docutils literal">tt.literal</tt></p>
-<p><strong>strong</strong></p>
-<p><em>em</em></p>
-<p><cite>cite</cite></p>
-<p><span class="formula"><i>span</i>.<i>formular</i>:<span class="limits"><span class="limit">lim</span></span><sub><i>x</i> → ∞</sub>exp( − <i>x</i>) = 0</span>
-</p>
-<p>substitution with <em>hello</em></p>
 <p>raw:</p>
 <pre class="literal-block">
-``tt.literal`` `cite`
+1. ol.arabic
 
-**strong**
+   - ol ul
+   - ol ul
 
-*em*
+     a. ol ul ol.loweralpha
+     b. ol ul ol
 
-:math:`span.formular: \lim_{x \to \infty} \exp(-x) = 0`
+        I. ol ul ol ol.upperroman
+        II. ol ul ol ol
 
-|subtext|
+- ul.simple
 
-.. |subtext| replace:: substitution with *hello*
+  1. ul ol.arabic
+  2. ul ol
+
+     - ul ol ul
+     - ul ol ul
+
+       * ul ol ul ul
+       * ul ol ul ul
 </pre>
-</blockquote>
-</div>
-<div class="section" id="lists">
-<h2><a class="toc-backref" href="#id7">1.2&nbsp;&nbsp;&nbsp;Lists</a></h2>
-<p>Bullet And enumerated list</p>
-<ol class="arabic simple">
-<li>ol.arabic<ul>
-<li>ol ul</li>
-<li>ol ul<ol class="loweralpha">
-<li>ol ul ol.loweralpha</li>
-<li>ol ul ol<ol class="upperroman">
-<li>ol ul ol ol.upperroman</li>
-<li>ol ul ol ol</li>
-</ol>
-</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-<ul class="simple">
-<li>ul.simple<ol class="arabic">
-<li>ul ol.arabic</li>
-<li>ul ol<ul>
-<li>ul ol ul</li>
-<li>ul ol ul<ul>
-<li>ul ol ul ul</li>
-<li>ul ol ul ul</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
 <p>table.field-list</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -3043,6 +1447,12 @@ span.boxed, span.framebox {
 </tr>
 </tbody>
 </table>
+<p>raw:</p>
+<pre class="literal-block">
+table.field-list
+
+:th.field-name: td.field-body
+</pre>
 <p>definition list: dl</p>
 <dl class="docutils">
 <dt>dt what</dt>
@@ -3050,6 +1460,16 @@ span.boxed, span.framebox {
 <dt>term 4 <span class="classifier-delimiter">:</span> <span class="classifier">span.classifier one</span> <span class="classifier-delimiter">:</span> <span class="classifier">classifier two</span></dt>
 <dd>Definition 4.</dd>
 </dl>
+<p>raw:</p>
+<pre class="literal-block">
+definition list: dl
+
+dt what
+    dd Definition lists associate a term with a definition.
+
+term 4 : span.classifier one : classifier two
+    Definition 4.
+</pre>
 <p>table.option-list</p>
 <table class="docutils option-list" frame="void" rules="none">
 <col class="option" />
@@ -3070,9 +1490,17 @@ and long descriptions</td></tr>
 <td>options can be long also</td></tr>
 </tbody>
 </table>
-<p>transition: hr.docutils</p>
+<p>raw:</p>
+<pre class="literal-block">
+table.option-list
+
+-t option           td.option-group : td
+-a                  command-line option &quot;a&quot;
+-b file             options can have arguments
+                    and long descriptions
+--long              options can be long also
+</pre>
 </div>
-<hr class="docutils" />
 <div class="section" id="blocks">
 <h2><a class="toc-backref" href="#id8">1.3&nbsp;&nbsp;&nbsp;Blocks</a></h2>
 <p>pre.literal-block:</p>
@@ -3081,13 +1509,37 @@ Where is the Cat?
 
 Do you see it?
 </pre>
+<p>raw:</p>
+<pre class="literal-block">
+pre.literal-block::
+
+  Where is the Cat?
+
+  Do you see it?
+</pre>
 <p>div.line-block</p>
 <div class="line-block">
 <div class="line">div.line line 1</div>
 <div class="line">div.line line 2</div>
 </div>
+<p>raw:</p>
+<pre class="literal-block">
+div.line-block
+
+| div.line line 1
+| div.line line 2
+</pre>
 <p>doctest block</p>
 <pre class="doctest-block">
+&gt;&gt;&gt; pre.doctest-block
+Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;
+&gt;&gt;&gt; print '(cut and pasted from interactive Python sessions)'
+(cut and pasted from interactive Python sessions)
+</pre>
+<p>raw:</p>
+<pre class="literal-block">
+doctest block
+
 &gt;&gt;&gt; pre.doctest-block
 Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;
 &gt;&gt;&gt; print '(cut and pasted from interactive Python sessions)'
@@ -3120,6 +1572,18 @@ Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;
 </tr>
 </tbody>
 </table>
+<p>raw:</p>
+<pre class="literal-block">
+table.docutils
+
++---------+---------+---------+
+| th.head | th.head | th.head |
++=========+=========+=========+
+| td      |  td     |         |
++---------+---------+---------+
+| td      |  td     |         |
++---------+---------+---------+
+</pre>
 <p>Table without head</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -3138,6 +1602,16 @@ Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;
 </tr>
 </tbody>
 </table>
+<p>raw:</p>
+<pre class="literal-block">
+Table without head
+
++----+-----+------+
+| td |  td |   td |
++----+-----+------+
+| td |  td |      |
++----+-----+------+
+</pre>
 <p>simple table</p>
 <p>table.docutils</p>
 <table border="1" class="docutils">
@@ -3156,10 +1630,21 @@ Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;
 </tr>
 </tbody>
 </table>
+<p>raw:</p>
+<pre class="literal-block">
+simple table
+
+table.docutils
+
+=====   ===
+aefe1   a2
+=====   ===
+aefe1   a2
+=====   ===
+</pre>
 </div>
 <div class="section" id="links">
 <h2><a class="toc-backref" href="#id10">1.5&nbsp;&nbsp;&nbsp;Links</a></h2>
-<blockquote>
 <p>a.reference.external
 <a class="reference external" href="mailto:test&#64;mail.com">test&#64;mail.com</a>
 <a class="reference external" href="http://github.com">http://github.com</a>
@@ -3170,12 +1655,46 @@ Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;
 substition reference <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a></p>
 <p>a.footnote.reference <a class="footnote-reference" href="#id4" id="id1">[1]</a></p>
 <p>a.citation.reference <a class="citation-reference" href="#test" id="id2">[Test]</a></p>
-</blockquote>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>table.footnote</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="test" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[Test]</a></td><td>table.citation</td></tr>
+</tbody>
+</table>
+<p>raw:</p>
+<pre class="literal-block">
+ a.reference.external
+ test&#64;mail.com
+ http://github.com
+ ftp://usr&#64;10.0.2.10:3322
+ github_
+ `embedded uri &lt;http://www.python.org&gt;`_
+ anoymous__
+ substition reference |RST|_
+
+ a.footnote.reference [1]_
+
+ a.citation.reference [Test]_
+
+
+ __ test
+ .. |RST| replace:: reStructuredText
+ .. _RST: http://docutils.sourceforge.net/rst.html
+.. _github: http://github.com
+.. [1] table.footnote
+.. [Test] table.citation
+</pre>
 </div>
 <div class="section" id="directives">
 <h2><a class="toc-backref" href="#id11">1.6&nbsp;&nbsp;&nbsp;Directives</a></h2>
 <blockquote>
-code: pre.code.python.literal-block</blockquote>
+pre.code.python.literal-block</blockquote>
 <pre class="code python literal-block">
 <span class="c">#!/usr/bin/python</span>
 <span class="c"># -*- coding: utf-8 -*-</span>
@@ -3185,16 +1704,9 @@ DV1&#64;au.de 2014
 
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">shutil</span>
-<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-<span class="kn">import</span> <span class="nn">binascii</span>
-
-<span class="kn">from</span> <span class="nn">NaServer</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">NaElement</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="k">def</span> <span class="nf">print_usage</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Parameter Usage Print on Console&quot;&quot;&quot;</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'Usage: main.py &lt;filer&gt; &lt;user&gt; &lt;password&gt;</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="s">'&lt;filer&gt; -- Filer name</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="s">'&lt;user&gt; -- User name</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="s">'&lt;password&gt; -- Password</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
@@ -3205,12 +1717,46 @@ DV1&#64;au.de 2014
 <span class="k">if</span> <span class="n">COM_ARG</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
     <span class="n">print_usage</span><span class="p">()</span>
 </pre>
+<p>raw:</p>
+<pre class="literal-block">
+    code: pre.code.python.literal-block
+
+.. code:: python
+
+   #!/usr/bin/python
+   # -*- coding: utf-8 -*-
+   &quot;&quot;&quot;Check NetApp Volumes for Volumes which are not Guarantee NONE
+   DV1&#64;au.de 2014
+   &quot;&quot;&quot;
+
+   import sys
+   import os
+
+   def print_usage():
+       &quot;&quot;&quot;Parameter Usage Print on Console&quot;&quot;&quot;
+       print('&lt;filer&gt; -- Filer name\n')
+       print('&lt;user&gt; -- User name\n')
+       print('&lt;password&gt; -- Password\n')
+       sys.exit(1)
+
+   # Anzahl der Parameter pruefen
+   COM_ARG = len(sys.argv) - 1
+   if COM_ARG &lt; 3:
+       print_usage()
+</pre>
 <hr class="docutils" />
 <blockquote>
-image/figure: img</blockquote>
+img (image and figure)</blockquote>
 <img alt="http://i4.minus.com/iblu46uOQ0N7Jx.jpg" src="http://i4.minus.com/iblu46uOQ0N7Jx.jpg" />
+<p>raw:</p>
+<pre class="literal-block">
+   image and figure: img
+
+.. image:: http://i4.minus.com/iblu46uOQ0N7Jx.jpg
+</pre>
 <hr class="docutils" />
-<p>admonition</p>
+<blockquote>
+div.admonition</blockquote>
 <div class="danger">
 <p class="first admonition-title">!DANGER!</p>
 <p class="last">Watch out, Bears!</p>
@@ -3231,18 +1777,58 @@ image/figure: img</blockquote>
 <p class="first admonition-title">Hint</p>
 <p class="last">What about one more shot?</p>
 </div>
+<p>raw:</p>
+<pre class="literal-block">
+div.admonition
+
+.. DANGER::
+   Watch out, Bears!
+.. CAUTION::
+   Beware killer rabbits!
+.. WARNING::
+   Take care of your self
+.. Important::
+   Remember the gold
+.. HINT::
+   What about one more shot?
+</pre>
 <hr class="docutils" />
-<p>epigraph</p>
+<blockquote>
+blockquote.epigraph</blockquote>
 <blockquote class="epigraph">
 No matter where you go, there you are.</blockquote>
+<p>raw:</p>
+<pre class="literal-block">
+   blockquote.epigraph
+
+.. epigraph::
+
+  No matter where you go, there you are.
+</pre>
 <hr class="docutils" />
 <p>p.rubic</p>
 <p class="rubric"><em>rubric</em> p.rubric</p>
+<p>raw:</p>
+<pre class="literal-block">
+p.rubic
+
+.. rubric::
+   *rubric* p.rubric
+</pre>
 <p>div.formular</p>
 <div class="formula">
 <i>Î</i>±<sub><i>t</i></sub>(<i>i</i>) = <i>P</i>(<i>O</i><sub>1</sub>, <i>O</i><sub>2</sub>, <i>â</i>€¦<i>O</i><sub><i>t</i></sub>, <i>q</i><sub><i>t</i></sub> = <i>S</i><sub><i>i</i></sub><i>Î</i>»)
 </div>
-<p>div.sidebar</p>
+<p>raw:</p>
+<pre class="literal-block">
+div.formular
+
+.. math::
+
+  Î±_t(i) = P(O_1, O_2, â€¦ O_t, q_t = S_i Î»)
+
+div.sidebar
+</pre>
 <div class="sidebar">
 <p class="first sidebar-title">div.sidebar-title</p>
 <p class="sidebar-subtitle">div.sidebar-subtitle</p>
@@ -3251,6 +1837,19 @@ No matter where you go, there you are.</blockquote>
 the body of the sidebar, and are
 interpreted as body elements.</p>
 </div>
+<p>raw:</p>
+<pre class="literal-block">
+div.sidebar
+
+.. sidebar:: div.sidebar-title
+  :subtitle: div.sidebar-subtitle
+
+  p.last
+
+  Subsequent indented lines comprise
+  the body of the sidebar, and are
+  interpreted as body elements.
+</pre>
 <p>div.topic</p>
 <div class="topic">
 <p class="topic-title first">p.topic-title</p>
@@ -3258,42 +1857,59 @@ interpreted as body elements.</p>
 the body of the topic, and are
 interpreted as body elements.</p>
 </div>
+<p>raw:</p>
+<pre class="literal-block">
+div.topic
+
+.. topic:: p.topic-title
+
+    Subsequent indented lines comprise
+    the body of the topic, and are
+    interpreted as body elements.
+</pre>
 <hr class="docutils" />
 <p><strong>option</strong></p>
 <p>sectnum: auto add section number</p>
+<p>raw:</p>
+<pre class="literal-block">
+**option**
+
+sectnum: auto add section number
+
+.. sectnum::
+</pre>
 </div>
 <div class="section" id="docutils-system">
 <h2><a class="toc-backref" href="#id12">1.7&nbsp;&nbsp;&nbsp;Docutils System</a></h2>
-<blockquote>
-<p>error: unknown target
-span.problematic <a href="#id13"><span class="problematic" id="id14">notar_</span></a></p>
-<p>warning: unexpected indent</p>
-</blockquote>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/ryk/github/rst-html-theme/test_doc.rst</tt>, line 293)</p>
-Block quote ends without a blank line; unexpected unindent.</div>
-<!-- unexpected indent -->
 <p>div.system-messages</p>
 <p>div.system-message</p>
 <p>p.system-message-title</p>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>table.footnote</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="test" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[Test]</a></td><td>table.citation</td></tr>
-</tbody>
-</table>
+<blockquote>
+error: unknown target
+span.problematic <a href="#id13"><span class="problematic" id="id14">notar_</span></a></blockquote>
+<p>raw:</p>
+<pre class="literal-block">
+error: unknown target
+span.problematic notar_
+</pre>
+<!--  -->
+<blockquote>
+warning: unexpected indent</blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">/home/ryk/github/rst-html-theme/test_doc.rst</tt>, line 562)</p>
+Block quote ends without a blank line; unexpected unindent.</div>
+<!-- unexpected indent -->
+<p>raw:</p>
+<pre class="literal-block">
+    warning: unexpected indent
+.. unexpected indent
+</pre>
 </div>
 </div>
 <div class="system-messages section">
 <h1>Docutils System Messages</h1>
 <div class="system-message" id="id13">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/ryk/github/rst-html-theme/test_doc.rst</tt>, line 288); <em><a href="#id14">backlink</a></em></p>
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">/home/ryk/github/rst-html-theme/test_doc.rst</tt>, line 551); <em><a href="#id14">backlink</a></em></p>
 Unknown target name: &quot;notar&quot;.</div>
 </div>
 </div>
