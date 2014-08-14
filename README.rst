@@ -1,14 +1,13 @@
-Rst Html Theme
-==============
+rhythm.css
+==========
 
-    A html theme for rst.
+    A theme for rst syntax.
 
-    -- rst-html-theme
+    -- Rhythm.css
 
-This is created for riv.vim_. 
-But can be used for any rst document.
+Optimized for rst document layout.
 
-View it at http://rykka.github.io/rst-html-theme/test
+View it at http://rykka.github.io/rhythm/test
 
 Post issues_ or fork_ it as you like.
 
@@ -16,9 +15,9 @@ Details
 -------
 
 The main theme html.css_ is inspired by GhostWriter_, 
-normalized, media sized and html4css.css are integrated.
+It's normalized, media size responsible and html4css.css integrated.
 
-You can use it as your rst document's themes.
+You can use it for  your rst document's themes.
 
 The css file in syntax folder are pygment's syntax themes.
 
@@ -43,7 +42,7 @@ download the files, then inside the folder, execute
 .. code:: sh
 
     rst2html.py /path/to/your/rst \
-        --stylesheet=html.css,syntax/molokai.css \
+        --stylesheet=rhythm.css,syntax/molokai.css \
         --syntax-highlight=short \
         > /path/to/the/output_html
 
