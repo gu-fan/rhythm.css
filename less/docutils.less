@@ -1,0 +1,398 @@
+// html4css {{{1
+
+
+body {
+  background: @body-bg;
+  color: @text-color;
+}
+
+a {
+  color: @brand-primary;
+}
+// Basic: transition {{{2
+hr.docutils {
+border: none;
+border-bottom: 1px dashed @hr-border-color;
+margin: @margin-huge-vertical 0;
+}
+
+
+// Section:title {{{2
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+margin-top: @margin-small-vertical }
+
+h1.title { text-align: center }
+
+h2.subtitle { text-align: center }
+
+// font-size relative to parent (h1..h6 element) 
+span.section-subtitle { font-size: 80% }
+
+.title {
+  font-size: @font-size-h1;
+  font-weight: bold;
+}
+
+
+// List: definition list {{{2
+dl.docutils dd {
+margin-bottom: @margin-small-vertical }
+
+dl.docutils dt {
+margin-top: @margin-large-vertical;
+font-weight: bold;
+margin-bottom: @margin-small-vertical }
+
+span.classifier {
+font-style: oblique }
+
+span.classifier-delimiter {
+font-weight: bold }
+
+// List: bullet & enumerated {{{2 
+ul, ol {
+  margin: 0 0 @margin-large-vertical @margin-large-vertical;
+padding: 0; }
+ul ul, ul ol, ol ul, ol ol {
+margin: 0.8em 0 0 @margin-large-vertical; }
+ul li, ol li { margin: 0 0 @margin-small-vertical; }
+
+ol.simple, ul.simple {
+margin-bottom: @line-height-computed }
+
+ol.arabic {
+list-style: decimal }
+
+ol.loweralpha {
+list-style: lower-alpha }
+
+ol.upperalpha {
+list-style: upper-alpha }
+
+ol.lowerroman {
+list-style: lower-roman }
+
+ol.upperroman {
+list-style: upper-roman }
+
+// Tables: include fieldlist/footnote/docinfo/etc {{{2
+// all table in docutls 
+table.docutils { 
+  margin-top: @margin-small-vertical ; 
+  margin-bottom: @margin-large-vertical; 
+  width: 100%;
+
+  th { padding: @margin-small-vertical; text-align: left; }
+  td { padding: @margin-small-vertical; }
+
+  th, td { border: 1px dotted @table-border-color; }
+  th { border-bottom: 1px solid @table-border-color; }
+  
+  // They are in fact list items
+  &.citation th,
+  &.citation td,
+  &.footnote th,
+  &.footnote td,
+  &.field-list th,
+  &.field-list td,
+  &.option-list th,
+  &.option-list td,
+  &.docinfo th,
+  &.docinfo td
+  { border: none; }
+}
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th { background-color:
+@table-odd-background; }
+
+// They are in fact list items
+table.field-list tbody > tr:nth-child(odd) > td,
+table.field-list tbody > tr:nth-child(odd) > th,
+table.footnote tbody > tr:nth-child(odd) > td,
+table.footnote tbody > tr:nth-child(odd) > th,
+table.citation tbody > tr:nth-child(odd) > td,
+table.citation tbody > tr:nth-child(odd) > th,
+table.docinfo tbody > tr:nth-child(odd) > td,
+table.docinfo tbody > tr:nth-child(odd) > th { background-color: transparent; }
+
+// [test]_ 
+table.citation {
+  width: auto;
+  border-left: solid 1px @gray-base;
+  margin-left: 1px 
+}
+
+
+// :field: item 
+table.field-list {
+  width: auto;
+}
+
+// :field: item 
+table.option-list { }
+span.option { white-space: nowrap }
+
+// :version: item 
+table.docinfo {
+  width: auto;
+margin: @margin-large-vertical @margin-huge-vertical }
+
+
+// [1] 
+table.footnote {
+  width: auto;
+  border-left: solid 1px black;
+margin-left: 1px }
+  
+p.label { white-space: nowrap }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: @margin-small-vertical ;
+  padding-right: @margin-small-vertical ;
+vertical-align: top }
+table.docinfo td { padding: @margin-small-vertical;  }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+padding: @padding-small-vertical;  }
+
+
+// Blockquote {{{2
+p.attribution {
+  font-weight:bold;
+  text-align: right ;
+  margin-left: 50% }
+
+blockquote {
+  opacity: 0.65;
+  border-left: 3px solid @blockquote-border-color;
+  margin: 0 0 @margin-large-vertical;
+  padding: @padding-base-horizontal @line-height-computed; 
+}
+
+blockquote.epigraph {
+margin: @margin-large-vertical @margin-huge-vertical ; }
+
+// Block: line-block {{{2
+div.line-block {
+  display: block ;
+  margin-top: @line-height-computed ;
+margin-bottom: @line-height-computed }
+
+div.line-block div.line {
+    background-color: @line-block-background;
+    margin-top: @margin-tiny-vertical;
+    margin-bottom: @margin-tiny-vertical;
+}
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: @margin-large-vertical }
+
+// Block: literal-block & code {{{2
+
+pre {
+  padding: @line-height-computed;
+}
+
+
+pre.doctest-block {
+  margin-left: @margin-large-vertical ;
+  margin-right: @margin-large-vertical;
+  background-color: @doctest-block-background;
+}
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: @margin-large-vertical ;
+  margin-right: @margin-large-vertical
+}
+
+pre.code .ln { // line numbers 
+  color: grey;
+}
+  
+pre.code {
+  border: 1px dotted @code-block-border-color;
+}
+
+.code, .literal, .literal-block {
+  background-color: @literal-block-background;
+}
+
+// Inline Literal 
+tt.literal { padding: 3px; }
+
+/* Inline interpreted text*/
+cite { }
+
+
+
+
+// Directive: admonition  /*{{{2*/
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: @margin-large-vertical ;
+  border: 1px dotted;
+padding: @line-height-computed }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+font-family: @font-family-sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: @brand-danger;
+  font-weight: bold ;
+font-family: @font-family-sans-serif }
+
+div.note p.admonition-title,
+div.important p.admonition-title{
+  color: @brand-success;
+}
+div.hint p.admonition-title,
+div.tip p.admonition-title {
+  color: @brand-info;
+}
+
+/* Directive: sidebar/rubric{{{2*/
+div.sidebar {
+  margin: 0 0 @margin-small-vertical @line-height-computed ;
+  border: 1px dotted;
+  padding: @line-height-computed ;
+  background-color: @sidebar-background;
+  width: 40% ;
+  float: right ;
+clear: right }
+
+div.sidebar p.rubric {
+  font-family: @font-family-sans-serif ;
+font-size: medium }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: @brand-success;
+text-align: center }
+
+p.sidebar-title {
+  font-family: @font-family-sans-serif ;
+  font-weight: bold ;
+font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: @font-family-sans-serif ;
+font-weight: bold }
+
+// Directive: image & embedded {{{2
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+// a graphic with a caption 
+div.figure {
+  margin-left: @margin-large-vertical ;
+  margin-right: @margin-large-vertical }
+p.caption { font-style: italic }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+margin-right: @line-height-computed }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+margin-left: @line-height-computed }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Directive: content {{{2
+div.topic {
+margin: @margin-large-vertical }
+
+p.topic-title {
+font-weight: bold }
+
+ul.auto-toc {
+list-style-type: none }
+
+a.toc-backref {
+  text-decoration: none ;
+color: black }
+
+// Directives: misc {{{2
+
+div.footer, div.header {
+  clear: both;
+font-size: smaller }
+
+
+// List: Bibliographic Fields {{{2
+div.abstract {
+margin: @margin-large-vertical @margin-huge-vertical }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+font-style: normal }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+text-align: center }
+
+div.dedication {
+  margin: @margin-large-vertical @margin-huge-vertical ;
+  text-align: center ;
+font-style: italic }
+
+// Docutil:error messages  /*{{{2*/
+span.problematic {
+color: @brand-danger; }
+
+div.system-messages {
+margin: @margin-huge-vertical }
+
+div.system-messages h1 {
+color: @brand-danger; }
+
+div.system-message {
+  border: medium solid;
+  margin: @line-height-computed;
+padding: @line-height-computed }
+
+div.system-message p.system-message-title {
+  color: @brand-danger ;
+font-weight: bold }
+
+// UNKNOW {{{2
+
+span.interpreted {
+font-family: @font-family-sans-serif }
+
+
+span.pre {
+white-space: pre }
+
+p.credits {
+  font-style: italic ;
+font-size: smaller }
+
+
+// vim: set sw=2 fdm=marker  
