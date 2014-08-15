@@ -1,8 +1,4 @@
 node_modules
 bower_components
-test/temp
-test/UpperCaseBug
-test/*.html
+test
 .idea
-.DS_Store
-release.txt
