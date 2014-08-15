@@ -1,4 +1,4 @@
 node_modules
-test
-.tmp
 bower_components
+test
+.idea
