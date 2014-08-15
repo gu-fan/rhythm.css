@@ -16,7 +16,7 @@ for rst document.
 
 `Article Preview`__
 
-__ http://rykka.github.io/rhythm.css/syntax
+__ http://rykka.github.io/rhythm.css/rst_syntax
 __ http://rykka.github.io/rhythm.css/article
 
 Post issues_ or fork_ it as you like.

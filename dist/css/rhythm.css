@@ -1,3 +1,9 @@
+/*!
+ * Rhythm.css v0.6.2 (https://github.com/Rykka/rhythm.css)
+ * Copyright 2014-2014 
+ * Licensed under  ()
+ */
+
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -425,6 +431,7 @@ h6.section-subtitle {
   margin-top: 10px;
 }
 h1.title {
+  font-size: 55.2px;
   text-align: center;
 }
 h2.subtitle {

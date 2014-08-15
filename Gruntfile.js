@@ -11,9 +11,9 @@ module.exports = function (grunt) {
     cssPath: path.join(__dirname, 'dist/css/rhythm.css'),
     synPath: path.join(__dirname, 'syntax/molokai.css'),
     mathPath: '/usr/local/lib/python2.7/dist-packages/docutils/writers/html4css1/math.css',
-    cssLink: 'http://rykka.github.io/rhythm.css/assets/css/rhythm.css',
-    synLink: 'http://rykka.github.io/rhythm.css/assets/css/syntax/molokai.css',
-    mathLink: 'http://rykka.github.io/rhythm.css/assets/css/math.css',
+    cssLink: 'http://rykka.github.io/rhythm.css/dist/css/rhythm.css',
+    synLink: 'http://rykka.github.io/rhythm.css/syntax/molokai.css',
+    mathLink: 'http://rykka.github.io/rhythm.css/math/math.css',
     banner: '/*!\n' +
             ' * Rhythm.css v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2014-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
@@ -75,26 +75,26 @@ module.exports = function (grunt) {
       npmUpdate: {
         command: 'npm update'
       },
-      test: {
+      test2: {
+        command: 'rst2html.py doc/wired_article.rst ' + 
+                    '--stylesheet=<%= cssPath %>,<%= synPath %> ' +
+                    '--syntax-highlight=short ' +
+                    '--link-stylesheet ' +
+                    '> test/article.html ' 
+      },
+      test1: {
         command: 'rst2html.py doc/rst_syntax.rst ' + 
                     '--stylesheet=<%= cssPath %>,<%= synPath %> ' +
                     '--syntax-highlight=short ' +
                     '--link-stylesheet ' +
                     '> test/rst_syntax.html ' 
       },
-      test2: {
-        command: 'rst2html.py doc/wired_article.rst ' + 
-                    '--stylesheet=<%= cssPath %>,<%= synPath %> ' +
-                    '--syntax-highlight=short ' +
-                    '--link-stylesheet ' +
-                    '> test/wired_article.html ' 
-      },
       test0: {
         command: 'rst2html.py README.rst ' + 
                     '--stylesheet=<%= cssPath %>,<%= synPath %> ' +
                     '--syntax-highlight=short ' +
                     '--link-stylesheet ' +
-                    '> test/README.html ' 
+                    '> test/index.html ' 
       },
       sed_syn: {
         command: 'sed -i s@<%= cssPath %>@<%= cssLink %>@ test/*.html ' 
@@ -105,11 +105,8 @@ module.exports = function (grunt) {
         command: 'echo <%= sysPath %>'
       },
       browse: {
-        command: 'firefox test/rst_syntax.html' 
+        command: 'firefox test/*.html' 
       },
-      browse2: {
-        command: 'firefox test/wired_article.html' 
-      }
     }
   });
 
@@ -126,12 +123,12 @@ module.exports = function (grunt) {
   // Full distribution task.
   grunt.registerTask('dist', ['clean', 'build']);
 
-  grunt.registerTask('test', ['exec:test', 'exec:browse']);
-  grunt.registerTask('test2', ['exec:test2', 'exec:browse2']);
-  grunt.registerTask('testgitlink', ['exec:test0', 'exec:test', 'exec:test2','exec:sed_syn', 'exec:browse', 'exec:browse2']);
+  grunt.registerTask('test', ['exec:test0', 'exec:test1','exec:test2']);
+  grunt.registerTask('testNorm', ['test', 'exec:browse']);
+  grunt.registerTask('testLink', ['test', 'exec:sed_syn', 'exec:browse']);
   
 
   // Default task.
-  grunt.registerTask('default', ['dist', 'test']);
+  grunt.registerTask('default', ['dist', 'testNorm']);
 
 };
