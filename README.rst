@@ -57,12 +57,12 @@ dist/css/rhythm.css
 
 doc/\*.rst
     A rst document with most rst syntax item.
-    Userd to test css with rst converted html file.
+    Use to test css with rst converted html file.
 
 syntax/\*.css
     Theme for pygment's syntax highlight. 
 
-    You can uset them in generate commands.
+    You can use them in generate commands.
 
 Gruntfile.js
     Build and testing commands included.
@@ -119,7 +119,7 @@ TODO
 .. _riv.vim: http://github.com/rykka/riv.vim
 .. _issues: https://github.com/Rykka/rhythm.css/issues
 .. _fork: https://github.com/Rykka/rhythm.css
-.. _`Syntax rst file`: http://rykka.github.io/rhythm.css/syntax.rst
-.. _`Article rst file`:  http://rykka.github.io/rhythm.css/article.rst
+.. _`Syntax rst file`: http://rykka.github.io/rhythm.css/doc/rst_syntax.rst
+.. _`Article rst file`:  http://rykka.github.io/rhythm.css/doc/wired_article.rst
 .. _specification: http://rykka.github.io/rhythm.css/specification
 .. _directives:  http://rykka.github.io/rhythm.css/directives
