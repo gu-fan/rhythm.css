@@ -89,6 +89,13 @@ module.exports = function (grunt) {
                     '--link-stylesheet ' +
                     '> test/wired_article.html ' 
       },
+      test0: {
+        command: 'rst2html.py README.rst ' + 
+                    '--stylesheet=<%= cssPath %>,<%= synPath %> ' +
+                    '--syntax-highlight=short ' +
+                    '--link-stylesheet ' +
+                    '> test/README.html ' 
+      },
       sed_syn: {
         command: 'sed -i s@<%= cssPath %>@<%= cssLink %>@ test/*.html ' 
         + '&&' +  ' sed -i s@<%= synPath %>@<%= synLink %>@ test/*.html' 
@@ -121,7 +128,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', ['exec:test', 'exec:browse']);
   grunt.registerTask('test2', ['exec:test2', 'exec:browse2']);
-  grunt.registerTask('testgitlink', ['exec:test', 'exec:test2','exec:sed_syn', 'exec:browse', 'exec:browse2']);
+  grunt.registerTask('testgitlink', ['exec:test0', 'exec:test', 'exec:test2','exec:sed_syn', 'exec:browse', 'exec:browse2']);
   
 
   // Default task.
