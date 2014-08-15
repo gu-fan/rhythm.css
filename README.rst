@@ -12,14 +12,18 @@ rhythm.css
 A css theme focus on reading,
 for rst document.
 
-`Syntax Preview`__ 
+`Syntax Preview`__  
+    RAW: `Syntax rst file`_
 
-`Article Preview`__
+`Article Preview`__  
+    RAW: `Article rst file`_
 
 __ http://rykka.github.io/rhythm.css/rst_syntax
 __ http://rykka.github.io/rhythm.css/article
 
-Post issues_ or fork_ it as you like.
+Github page is at https://github.com/Rykka/rhythm.css
+
+Post issues_ or fork it if needed.
 
 Details
 -------
@@ -54,8 +58,6 @@ dist/css/rhythm.css
 doc/\*.rst
     A rst document with most rst syntax item.
     Userd to test css with rst converted html file.
-
-    Preview at http://rykka.github.io/rhythm.css/test
 
 syntax/\*.css
     Theme for pygment's syntax highlight. 
@@ -96,6 +98,15 @@ Usage
         > /path/to/the/output_html
 
 
+Related
+-------
+
+This theme is build for riv.vim_,
+You can use it if you are writing rst document in vim.
+
+And you can find rst specification_ and directives_ here too.
+
+
 TODO
 ----
 
@@ -108,3 +119,7 @@ TODO
 .. _riv.vim: http://github.com/rykka/riv.vim
 .. _issues: https://github.com/Rykka/rhythm.css/issues
 .. _fork: https://github.com/Rykka/rhythm.css
+.. _`Syntax rst file`: http://rykka.github.io/rhythm.css/syntax.rst
+.. _`Article rst file`:  http://rykka.github.io/rhythm.css/article.rst
+.. _specification: http://rykka.github.io/rhythm.css/specification
+.. _directives:  http://rykka.github.io/rhythm.css/directives

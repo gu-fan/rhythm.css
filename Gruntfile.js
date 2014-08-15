@@ -14,6 +14,9 @@ module.exports = function (grunt) {
     cssLink: 'http://rykka.github.io/rhythm.css/dist/css/rhythm.css',
     synLink: 'http://rykka.github.io/rhythm.css/syntax/molokai.css',
     mathLink: 'http://rykka.github.io/rhythm.css/math/math.css',
+    rst2html_arg: '--stylesheet=<%= cssPath %>,<%= synPath %> ' +
+                      '--syntax-highlight=short ' +
+                      '--link-stylesheet ',
     banner: '/*!\n' +
             ' * Rhythm.css v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2014-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
@@ -22,7 +25,9 @@ module.exports = function (grunt) {
 
     // Task configuration.
     clean: {
-      dist: ['dist']
+      dist: 'dist',
+      docsDist: 'docs/dist',
+      test: 'test'
     },
 
     less: {
@@ -75,34 +80,15 @@ module.exports = function (grunt) {
       npmUpdate: {
         command: 'npm update'
       },
-      test2: {
-        command: 'rst2html.py doc/wired_article.rst ' + 
-                    '--stylesheet=<%= cssPath %>,<%= synPath %> ' +
-                    '--syntax-highlight=short ' +
-                    '--link-stylesheet ' +
-                    '> test/article.html ' 
-      },
-      test1: {
-        command: 'rst2html.py doc/rst_syntax.rst ' + 
-                    '--stylesheet=<%= cssPath %>,<%= synPath %> ' +
-                    '--syntax-highlight=short ' +
-                    '--link-stylesheet ' +
-                    '> test/rst_syntax.html ' 
-      },
-      test0: {
-        command: 'rst2html.py README.rst ' + 
-                    '--stylesheet=<%= cssPath %>,<%= synPath %> ' +
-                    '--syntax-highlight=short ' +
-                    '--link-stylesheet ' +
-                    '> test/index.html ' 
-      },
+      test0: { command: 'mkdir -p test && rst2html.py README.rst <%= rst2html_arg %> > test/index.html ' },
+      test1: { command: 'rst2html.py doc/rst_syntax.rst <%= rst2html_arg %> > test/rst_syntax.html ' },
+      test2: { command: 'rst2html.py doc/wired_article.rst <%= rst2html_arg %> > test/article.html ' },
+      test3: { command: 'rst2html.py doc/rst_specification.rst <%= rst2html_arg %> > test/specification.html ' },
+      test4: { command: 'rst2html.py doc/rst_directives.rst <%= rst2html_arg %> > test/directives.html ' },
       sed_syn: {
         command: 'sed -i s@<%= cssPath %>@<%= cssLink %>@ test/*.html ' 
         + '&&' +  ' sed -i s@<%= synPath %>@<%= synLink %>@ test/*.html' 
         + '&&' +  ' sed -i s@<%= mathPath %>@<%= mathLink %>@ test/*.html' 
-      },
-      echo_sed: {
-        command: 'echo <%= sysPath %>'
       },
       browse: {
         command: 'firefox test/*.html' 
@@ -123,11 +109,10 @@ module.exports = function (grunt) {
   // Full distribution task.
   grunt.registerTask('dist', ['clean', 'build']);
 
-  grunt.registerTask('test', ['exec:test0', 'exec:test1','exec:test2']);
+  grunt.registerTask('test', ['exec:test0', 'exec:test1','exec:test2', 'exec:test3','exec:test4']);
   grunt.registerTask('testNorm', ['test', 'exec:browse']);
   grunt.registerTask('testLink', ['test', 'exec:sed_syn', 'exec:browse']);
   
-
   // Default task.
   grunt.registerTask('default', ['dist', 'testNorm']);
 
