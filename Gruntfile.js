@@ -10,6 +10,9 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     cssPath: path.join(__dirname, 'dist/css/rhythm.css'),
     synPath: path.join(__dirname, 'dist/syntax/molokai.css'),
+    cssLink: 'https://raw.github.com/Rykka/rhythm.css/master/dist/css/rhythm.css',
+    synLink: 'https://raw.github.com/Rykka/rhythm.css/master/syntax/molokai.css',
+    mathLink: 'https://raw.github.com/Rykka/rhythm.css/master/math/math.css',
     banner: '/*!\n' +
             ' * Rhythm.css v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2014-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
@@ -78,8 +81,32 @@ module.exports = function (grunt) {
                     '--link-stylesheet ' +
                     '> test/rst_syntax.html ' 
       },
+      test2: {
+        command: 'rst2html.py doc/wired_article.rst ' + 
+                    '--stylesheet=<%= cssPath %>,<%= synPath %> ' +
+                    '--syntax-highlight=short ' +
+                    '--link-stylesheet ' +
+                    '> test/wired_article.html ' 
+      },
+      build_syn: {
+        command: 'rst2html.py doc/rst_syntax.rst ' + 
+                    '--stylesheet=<%= cssLink %>,<%= synLink %>,<%= mathLink => ' +
+                    '--syntax-highlight=short ' +
+                    '--link-stylesheet ' +
+                    '> test/rst_syntax.html ' 
+      },
+      build_doc: {
+        command: 'rst2html.py doc/wired_article.rst ' + 
+                    '--stylesheet=<%= cssLink %>,<%= synLink %>,<%= mathLink => ' +
+                    '--syntax-highlight=short ' +
+                    '--link-stylesheet ' +
+                    '> test/rst_syntax.html ' 
+      },
       browse: {
         command: 'firefox test/rst_syntax.html' 
+      },
+      browse2: {
+        command: 'firefox test/wired_article.html' 
       }
     }
   });
@@ -98,6 +125,9 @@ module.exports = function (grunt) {
   grunt.registerTask('dist', ['clean', 'build']);
 
   grunt.registerTask('test', ['exec:test', 'exec:browse']);
+  grunt.registerTask('test2', ['exec:test2', 'exec:browse2']);
+  grunt.registerTask('test-doc1', ['exec:build_syn', 'exec:browse2']);
+  grunt.registerTask('test-doc2', ['exec:build_doc', 'exec:browse2']);
 
   // Default task.
   grunt.registerTask('default', ['dist', 'test']);

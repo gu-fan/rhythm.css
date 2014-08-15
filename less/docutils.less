@@ -1,36 +1,35 @@
 // html4css {{{1
 
 
-body {
-  background: @body-bg;
-  color: @text-color;
-}
+.document {
 
-a {
-  color: @link-color;
-  text-decoration: none;
-  &:hover {
-    color: @link-hover-color;
+    background: @body-bg;
+    color: @text-color;
+  a {
+    color: @link-color;
+    text-decoration: none;
+    &:hover {
+      color: @link-hover-color;
+    }
+  }
+
+  p {
+    line-height: 1.5;
+    margin: 0 0 @margin-base-vertical;
+  }
+
+  a:hover { text-decoration: underline; }
+  pre {
+    margin-bottom: @margin-large-vertical;
+  }
+  img {
+    margin: @margin-base-vertical auto;
   }
 }
-
-p {
-line-height: 1.5;
-margin: 0 0 @margin-base-vertical;
-}
-
-a:hover { text-decoration: underline; }
-pre {
-  margin-bottom: @margin-large-vertical;
-}
-img {
-  margin: @margin-base-vertical auto;
-}
-
 // Basic: transition {{{2
 hr.docutils {
 border: none;
-border-bottom: 1px dashed @hr-border-color;
+border-bottom: 2px dashed @hr-border-color;
 margin: @margin-huge-vertical 0;
 }
 
@@ -132,6 +131,15 @@ table.docutils {
   &.docinfo th,
   &.docinfo td
   { border: none; }
+
+  p {
+    margin: @table-p-margin 0;
+  }
+  ul li, ol li {
+    margin-top: @table-p-margin;
+    margin-bottom: @table-p-margin;
+    margin-left: @table-list-indentation;
+  }
 }
 
 
@@ -193,6 +201,7 @@ table.docinfo td { padding: @margin-small-vertical;  }
 table.docutils th.field-name, table.docinfo th.docinfo-name {
   line-height: 1.2;
   font-weight: bold ;
+  font-family: @headings-font-family;
   text-align: left ;
   white-space: nowrap ;
   padding: @margin-small-vertical;
@@ -201,11 +210,13 @@ table.docutils th.field-name, table.docinfo th.docinfo-name {
 
 // Blockquote {{{2
 p.attribution {
-  font-weight:bold;
+  font-family: @headings-font-family;
+  font-weight: bold;
+  font-style: italic;
   text-align: right ;
   margin-left: 50% }
 
-blockquote {
+.document blockquote {
   opacity: 0.65;
   border-left: 3px solid @blockquote-border-color;
   margin: 0 0 @margin-large-vertical;
@@ -233,18 +244,12 @@ div.line-block div.line-block {
 
 // Block: literal-block & code {{{2
 
-pre {
+.document pre {
   padding: @line-height-computed;
   line-height: 1.4;
 }
 
 
-pre.doctest-block {
-  border: 1px dotted @code-block-border-color;
-  margin-left: @margin-large-vertical ;
-  margin-right: @margin-large-vertical;
-  background-color: @doctest-block-background;
-}
 pre.address {
   margin-bottom: 0 ;
   margin-top: 0 ;
@@ -265,7 +270,15 @@ pre.code .ln { // line numbers
   background-color: @literal-block-background;
 }
 
+pre.doctest-block {
+  font-family: @font-family-monospace;
+  border: 1px dotted @code-block-border-color;
+  margin-left: @margin-large-vertical ;
+  margin-right: @margin-large-vertical;
+  background-color: @doctest-block-background;
+}
 pre.code.literal-block {
+  font-family: @font-family-monospace;
   border: 1px dotted @code-block-border-color;
   color: @code-block-font-color;
   background-color: @code-block-background;
@@ -322,7 +335,7 @@ div.tip p.admonition-title {
 /* Directive: sidebar/rubric{{{2*/
 div.sidebar {
   margin: 0 0 @margin-small-vertical @line-height-computed ;
-  border: 1px dotted;
+  border: 1px dotted @sidebar-border-color;
   padding: @line-height-computed ;
   background-color: @sidebar-background;
   width: 40% ;
@@ -331,14 +344,17 @@ clear: right }
 
 div.sidebar p.rubric {
   font-family: @font-family-sans-serif ;
-font-size: medium }
+  font-size: medium
+}
 
 p.rubric {
   font-weight: bold ;
-  font-size: larger ;
+  font-size: @font-size-h4;
   color: @rubric-color;
-text-align: center }
-
+  text-align: center;
+  margin-top: 10px ;
+  margin-bottom: 10px ;
+}
 p.sidebar-title {
   font-family: @font-family-sans-serif ;
   font-weight: bold ;
@@ -356,9 +372,23 @@ object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
 // a graphic with a caption 
 div.figure {
   margin-left: @margin-large-vertical ;
-  margin-right: @margin-large-vertical }
-p.caption { font-style: italic }
-.legend p {font-size: 90%; color: @legend-color;}
+  margin-right: @margin-large-vertical;
+  p.caption { 
+    font-style: italic;
+  color: @legend-color;
+    margin-top:(-@margin-base-vertical);
+    margin-bottom:@margin-base-vertical;
+  }
+  .legend, {
+    margin-top:(-@margin-base-vertical);
+    margin-bottom:@margin-base-vertical;
+     p {
+      margin: 0;
+    }
+  font-size: 90%; 
+  color: @legend-color;
+}
+}
 
 
 img.align-left, .figure.align-left, object.align-left {
@@ -403,6 +433,7 @@ div.abstract {
 margin: @margin-large-vertical @margin-huge-vertical }
 
 div.dedication p.topic-title {
+  font-family: @headings-font-family;
   font-weight: bold ;
 font-style: normal }
 
@@ -411,6 +442,7 @@ div.abstract p.topic-title {
 text-align: center }
 
 div.dedication {
+
   margin: @margin-large-vertical @margin-huge-vertical ;
   text-align: center ;
 font-style: italic }

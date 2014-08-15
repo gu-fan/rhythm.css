@@ -1,7 +1,7 @@
 {
   "name": "rhythm",
-  "version": "0.1.0",
-  "description": "rhythm.css, a css theme for document",
+  "version": "0.6.2",
+  "description": "a css theme focus on reading, for rst document",
   "main": "index.js",
   "scripts": {
     "test": "grunt test"
@@ -11,7 +11,7 @@
     "url": "https://github.com/Rykka/rhythm.css.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Rykka/rhythm.css/issues"
   },

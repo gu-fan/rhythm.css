@@ -245,7 +245,7 @@ The right padding separates the table cells. */
 }
 /*}}}*/
 body {
-  font-family: "Open Sans", arial, sans-serif;
+  font-family: 700 2.6656rem/1.1em "Open Sans", arial, sans-serif;
   font-size: 18px;
 }
 h1,
@@ -260,7 +260,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: 700 2.6656rem/1.1em "Open Sans", arial, sans-serif;
   line-height: 1.1;
   color: inherit;
 }
@@ -387,33 +387,33 @@ blockquote:after {
 .align-right {
   text-align: inherit;
 }
-body {
+.document {
   background: #fefefe;
   color: #333333;
 }
-a {
+.document a {
   color: #279cf5;
   text-decoration: none;
 }
-a:hover {
+.document a:hover {
   color: #0975c6;
 }
-p {
+.document p {
   line-height: 1.5;
   margin: 0 0 25px;
 }
-a:hover {
+.document a:hover {
   text-decoration: underline;
 }
-pre {
+.document pre {
   margin-bottom: 35px;
 }
-img {
+.document img {
   margin: 25px auto;
 }
 hr.docutils {
   border: none;
-  border-bottom: 1px dashed #666666;
+  border-bottom: 2px dashed #cccacc;
   margin: 75px 0;
 }
 h1.section-subtitle,
@@ -524,6 +524,15 @@ table.docutils.docinfo th,
 table.docutils.docinfo td {
   border: none;
 }
+table.docutils p {
+  margin: 5px 0;
+}
+table.docutils ul li,
+table.docutils ol li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
   background-color: #f7f7ed;
@@ -579,16 +588,19 @@ table.docutils th.field-name,
 table.docinfo th.docinfo-name {
   line-height: 1.2;
   font-weight: bold ;
+  font-family: 700 2.6656rem/1.1em "Open Sans", arial, sans-serif;
   text-align: left ;
   white-space: nowrap ;
   padding: 10px;
 }
 p.attribution {
+  font-family: 700 2.6656rem/1.1em "Open Sans", arial, sans-serif;
   font-weight: bold;
+  font-style: italic;
   text-align: right ;
   margin-left: 50%;
 }
-blockquote {
+.document blockquote {
   opacity: 0.65;
   border-left: 3px solid #eeeeee;
   margin: 0 0 35px;
@@ -612,15 +624,9 @@ div.line-block div.line-block {
   margin-bottom: 0 ;
   margin-left: 35px;
 }
-pre {
+.document pre {
   padding: 25px;
   line-height: 1.4;
-}
-pre.doctest-block {
-  border: 1px dotted #ccccb4;
-  margin-left: 35px;
-  margin-right: 35px;
-  background-color: #f7f7ed;
 }
 pre.address {
   margin-bottom: 0 ;
@@ -642,7 +648,15 @@ pre.code .ln {
   border: 1px dotted #cacbcc;
   background-color: #f7f7f7;
 }
+pre.doctest-block {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  border: 1px dotted #ccccb4;
+  margin-left: 35px;
+  margin-right: 35px;
+  background-color: #f7f7ed;
+}
 pre.code.literal-block {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   border: 1px dotted #ccccb4;
   color: #faf7ed;
   background-color: #141412;
@@ -698,7 +712,7 @@ div.tip p.admonition-title {
 /* Directive: sidebar/rubric{{{2*/
 div.sidebar {
   margin: 0 0 10px 25px;
-  border: 1px dotted;
+  border: 1px dotted #cacbcc;
   padding: 25px;
   background-color: #f7f7ed;
   width: 40% ;
@@ -711,9 +725,11 @@ div.sidebar p.rubric {
 }
 p.rubric {
   font-weight: bold ;
-  font-size: larger ;
-  color: #72eb3b;
+  font-size: 23px;
+  color: #989997;
   text-align: center;
+  margin-top: 10px ;
+  margin-bottom: 10px ;
 }
 p.sidebar-title {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -732,12 +748,20 @@ div.figure {
   margin-left: 35px;
   margin-right: 35px;
 }
-p.caption {
+div.figure p.caption {
   font-style: italic;
+  color: #888888;
+  margin-top: -25px;
+  margin-bottom: 25px;
 }
-.legend p {
+div.figure .legend {
+  margin-top: -25px;
+  margin-bottom: 25px;
   font-size: 90%;
   color: #888888;
+}
+div.figure .legend p {
+  margin: 0;
 }
 img.align-left,
 .figure.align-left,
@@ -782,6 +806,7 @@ div.abstract {
   margin: 35px 75px;
 }
 div.dedication p.topic-title {
+  font-family: 700 2.6656rem/1.1em "Open Sans", arial, sans-serif;
   font-weight: bold ;
   font-style: normal;
 }

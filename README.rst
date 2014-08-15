@@ -1,38 +1,77 @@
 rhythm.css
 ==========
 
+:version: 0.62
+
+..
+
     **r**\st **h**\tml **th**\e\ **\m**\e
 
     -- rhythm.css
 
-A css theme for rst document, 
-focused on reading.
+A css theme focus on reading,
+for rst document.
 
-Preview at http://rykka.github.io/rhythm.css/test
+`Syntax Preview`__ 
+
+`Article Preview`__
+
+__ http://rykka.github.io/rhythm.css/syntax
+__ http://rykka.github.io/rhythm.css/article
 
 Post issues_ or fork_ it as you like.
 
 Details
 -------
 
-dist/css/rhythm.css_ 
-    Optimized for better reading.
+::
+    
+    .
+    ├── less
+    │   ├── docutils.less
+    │   ├── *.less
+    ├── dist
+    │   └── css
+    │       └── rhythm.css
+    ├── doc
+    │   ├── rst_syntax.rst
+    │   └── *.rst
+    ├── syntax
+    │   ├── default.css
+    │   ├── *.css
+    │   └── murphy.css
+    ├── Gruntfile.js
+    └── README.rst
 
-    It's normalized, responsive, and rst syntax ready.
+less/\*.less
+    The source code
 
-syntax/\*.css
-    Used for pygment's syntax highlight. 
+dist/css/rhythm.css 
+    Css file ready for use
+    
+    Optimized for better reading, And rst syntax ready.
 
-doc/rst_syntax.rst_
+doc/\*.rst
     A rst document with most rst syntax item.
     Userd to test css with rst converted html file.
 
     Preview at http://rykka.github.io/rhythm.css/test
 
+syntax/\*.css
+    Theme for pygment's syntax highlight. 
+
+    You can uset them in generate commands.
+
+Gruntfile.js
+    Build and testing commands included.
+
+    First install with ``npm install``,
+    Then build and test with ``grunt``.
+
 Usage
 -----
 
-1. Install convert tool
+1. Install tool
 
 .. code:: sh
 
@@ -47,7 +86,7 @@ Usage
    cd rhythm.css
 
 
-3. Execute
+3. Generate Html
 
 .. code:: sh
 
@@ -55,6 +94,7 @@ Usage
         --stylesheet=rhythm.css,syntax/molokai.css \
         --syntax-highlight=short \
         > /path/to/the/output_html
+
 
 TODO
 ----
@@ -66,8 +106,5 @@ TODO
 
 
 .. _riv.vim: http://github.com/rykka/riv.vim
-.. _rhythm.css: dist/css/rhythm.css
-.. _rst_syntax.rst: doc/rst_syntax.rst
-.. _GhostWriter: http://ghost.jollygoodthemes.com/ghostwriter/
 .. _issues: https://github.com/Rykka/rhythm.css/issues
 .. _fork: https://github.com/Rykka/rhythm.css
