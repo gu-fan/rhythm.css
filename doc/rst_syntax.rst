@@ -275,7 +275,7 @@ div.formular
 
 .. math::
 
-  Î±_t(i) = P(O_1, O_2, â€¦ O_t, q_t = S_i Î»)
+  Î±_t(i) = P(O_1, O_2, O_t, q_t = S_i Î»)
 
 .. sidebar:: div.sidebar-title
   :subtitle: div.sidebar-subtitle
