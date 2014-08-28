@@ -9,8 +9,15 @@ rhythm.css
 
     -- rhythm.css
 
-A css theme focus on reading,
-for rst document.
+A css theme focus on reading, for rst document.
+
+.. figure:: https://github.com/Rykka/github_things/raw/master/image/rst_quick_start.gif 
+    :align: center
+
+    Screencast with riv.vim_
+
+----
+
 
 `Syntax Preview`__  
     RAW: `Syntax rst file`_
