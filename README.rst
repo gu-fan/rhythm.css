@@ -11,10 +11,10 @@ rhythm.css
 
 A css theme focus on reading, for rst document.
 
-.. figure:: https://github.com/Rykka/github_things/raw/master/image/rst_quick_start.gif 
+.. figure:: https://github.com/Rykka/github_things/raw/master/image/rst_quick_start.gif
     :align: center
 
-    Screencast with riv.vim_
+    riv.vim_ (vim) +  InstantRst_ (web server) +  rhythm.css_ (theme)
 
 ----
 
@@ -28,7 +28,6 @@ A css theme focus on reading, for rst document.
 __ http://rykka.github.io/rhythm.css/rst_syntax
 __ http://rykka.github.io/rhythm.css/article
 
-Github page is at https://github.com/Rykka/rhythm.css
 
 Post issues_ or fork it if needed.
 
@@ -130,3 +129,5 @@ TODO
 .. _`Article rst file`:  http://rykka.github.io/rhythm.css/doc/wired_article.rst
 .. _specification: http://rykka.github.io/rhythm.css/specification
 .. _directives:  http://rykka.github.io/rhythm.css/directives
+.. _rhythm.css: http://github.com/Rykka/rhythm.css
+.. _InstantRst: https://github.com/Rykka/InstantRst
